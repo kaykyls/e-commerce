@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header-container {
+  margin: 0 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+  .buttons {
+    display: flex;
+    gap: 1rem;
+    font-size: 2rem;
+
+    i {
+      cursor: pointer;
+    }
+  }
+
+  .search {
+    // display: flex;
+    width: 50%;
+  }
+}
+
+.navbar-wrapper {
+  margin: 0 4rem;
+}
