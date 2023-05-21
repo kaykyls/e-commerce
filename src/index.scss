@@ -16,7 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 14rem;
+  padding: 1rem 16rem;
 
   .buttons {
     display: flex;
@@ -35,7 +35,7 @@
 }
 
 .navbar-wrapper {
-  margin: 0 14rem;
+  margin: 0 16rem;
 }
 
 .navbar-expand-sm {
@@ -50,8 +50,8 @@
 }
 
 .slider-container {
-  margin: 0 14rem;
-  border-radius: 6px;
+  margin: 0 16rem;
+  border-radius: 1rem;
 }
 
 .carousel-item {
@@ -66,7 +66,7 @@
 
 .cards-container {
   display: flex;
-  margin: 0 14rem;
+  margin: 0 16rem;
   gap: 2rem;
   justify-content: space-between;
 
@@ -82,5 +82,9 @@
 
 .info {
   display: flex;
-  margin: 0 14rem;
+  margin: 0 16rem;
+}
+
+.nav-item a {
+  font-size: 1.2rem;
 }
