@@ -168,10 +168,18 @@ function App() {
                 <div className="card-body">
                   <h5 className="card-title">Adidas 1</h5>
                   {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
+                  <div className="rating mb-2">
+                      <i className="bi bi-star-fill"></i>
+                      <i className="bi bi-star-fill"></i>
+                      <i className="bi bi-star-fill"></i>
+                      <i className="bi bi-star-fill"></i>
+                      <i className="bi bi-star-half"></i>
+                    </div>
                   <div className='price'>
                     <p className='previous-price'>$99.99</p>
                     <p className='current-price'>$49.99</p>
                   </div>
+                  
                   {/* <a href="#" className="btn btn-primary">Go to Product</a> */}
                 </div>
               </div>
@@ -183,10 +191,18 @@ function App() {
                 <div className="card-body">
                   <h5 className="card-title">Nike 1</h5>
                   {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
+                  <div className="rating mb-2">
+                      <i className="bi bi-star-fill"></i>
+                      <i className="bi bi-star-fill"></i>
+                      <i className="bi bi-star-fill"></i>
+                      <i className="bi bi-star-fill"></i>
+                      <i className="bi bi-star-fill"></i>
+                    </div>
                   <div className='price'>
-                    <p className='previous-price'>$99.99</p>
-                    <p className='current-price'>$49.99</p>
+                    <p className='previous-price'>$199.99</p>
+                    <p className='current-price'>$99.99</p>
                   </div>
+                  
                   {/* <a href="#" className="btn btn-primary">Go to Product</a> */}
                 </div>
               </div>
@@ -198,9 +214,16 @@ function App() {
                 <div className="card-body">
                   <h5 className="card-title">Nike 2</h5>
                   {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
-                  <div className='price'>
-                    <p className='previous-price'>$99.99</p>
-                    <p className='current-price'>$49.99</p>
+                  <div className="rating mb-2">
+                      <i className="bi bi-star-fill"></i>
+                      <i className="bi bi-star-fill"></i>
+                      <i className="bi bi-star-fill"></i>
+                      <i className="bi bi-star-fill"></i>
+                      <i className="bi bi-star"></i>
+                    </div>
+                    <div className='price'>
+                    <p className='previous-price'>$69.99</p>
+                    <p className='current-price'>$29.99</p>
                   </div>
                   {/* <a href="#" className="btn btn-primary">Go to Product</a> */}
                 </div>
@@ -213,10 +236,18 @@ function App() {
                 <div className="card-body">
                   <h5 className="card-title">Adidas 1</h5>
                   {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
+                  <div className="rating mb-2">
+                      <i className="bi bi-star-fill"></i>
+                      <i className="bi bi-star-fill"></i>
+                      <i className="bi bi-star-fill"></i>
+                      <i className="bi bi-star-fill"></i>
+                      <i className="bi bi-star-half"></i>
+                  </div>
                   <div className='price'>
                     <p className='previous-price'>$99.99</p>
                     <p className='current-price'>$49.99</p>
                   </div>
+                  
                   {/* <a href="#" className="btn btn-primary">Go to Product</a> */}
                 </div>
               </div>
@@ -249,7 +280,7 @@ function App() {
         </section>
 
         <section className="">
-          <div className="row text-center text-md-start">
+          <div className="row row-cols-2 text-start">
             <div className="col-lg-3 col-md-6 mb-5 mb-lg-0 gap-3 gap-sm-1 d-flex flex-column">
               <h5 className="text-uppercase fw-bold fs-4">Company</h5>
               <ul className="list-unstyled mb-0 gap-2 gap-md-3 d-flex flex-column">
@@ -308,16 +339,16 @@ function App() {
               <h5 className="text-uppercase fw-bold fs-4">Contact</h5>
               <ul className="list-unstyled mb-0 gap-2 gap-md-3 d-flex flex-column">
                 <li>
-                  <a href="#" className="text-white"><i className="bi bi-house-door-fill me-3"></i><span>New York, NY 69420, US</span></a>
+                  <a href="#" className="text-white"><i className="bi bi-house-door-fill me-1 me-md-3"></i><span>New York, NY 69420, US</span></a>
                 </li>
                 <li>
-                  <a href="#" className="text-white"><i className="bi bi-envelope-fill me-3"></i><span>e-commerce-kaykyls@email.com</span></a>
+                  <a href="#" className="text-white"><i className="bi bi-envelope-fill me-1 me-md-3"></i><span>e-commerce-kaykyls@email.com</span></a>
                 </li>
                 <li>
-                  <a href="#" className="text-white"><i className="bi bi-telephone-fill me-3"></i><span>+ 01 234 567 89</span></a>
+                  <a href="#" className="text-white"><i className="bi bi-telephone-fill me-1 me-md-3"></i><span>+ 01 234 567 89</span></a>
                 </li>
                 <li>
-                  <a href="#" className="text-white"><i className="bi bi-whatsapp me-3"></i><span>+ 98 765 432 10</span></a>
+                  <a href="#" className="text-white"><i className="bi bi-whatsapp me-1 me-md-3"></i><span>+ 98 765 432 10</span></a>
                 </li>
               </ul>
             </div>
