@@ -23,11 +23,11 @@ function App() {
                 </div>
                 <div className="offcanvas-body">
                 <ul className="navbar-nav justify-content-end flex-grow-1">
-                  <li className="nav-item">
+                  <li className="nav-item fs-5">
                     <a className="nav-link active" aria-current="page" href="#">Home</a>
                   </li>
                   <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a className="nav-link dropdown-toggle fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Categories
                     </a>
                     <ul className="dropdown-menu">
@@ -36,10 +36,10 @@ function App() {
                       <li><a className="dropdown-item" href="#">category 3</a></li>
                     </ul>
                   </li>
-                  <li className="nav-item">
+                  <li className="nav-item fs-5">
                     <a href="#" className="nav-link">Offers</a>
                   </li>
-                  <li className="nav-item">
+                  <li className="nav-item fs-5">
                     <a href="#" className="nav-link">Sell</a>
                   </li>
                 </ul>
@@ -250,9 +250,9 @@ function App() {
 
         <section className="">
           <div className="row text-center text-md-start">
-            <div className="col-lg-3 col-md-6 mb-4 gap-3 gap-sm-1 d-flex flex-column">
+            <div className="col-lg-3 col-md-6 mb-5 mb-lg-0 gap-3 gap-sm-1 d-flex flex-column">
               <h5 className="text-uppercase fw-bold fs-4">Company</h5>
-              <ul className="list-unstyled mb-0 gap-3 d-flex flex-column">
+              <ul className="list-unstyled mb-0 gap-2 gap-md-3 d-flex flex-column">
                 <li>
                   <a href="#" className="text-white">About Us</a>
                 </li>
@@ -268,9 +268,9 @@ function App() {
               </ul>
             </div>
 
-            <div className="col-lg-3 col-md-6 mb-4 gap-3 gap-sm-1 d-flex flex-column">
+            <div className="col-lg-3 col-md-6 mb-5 mb-lg-0 gap-3 gap-sm-1 d-flex flex-column">
               <h5 className="text-uppercase fw-bold fs-4">Products</h5>
-              <ul className="list-unstyled mb-0 gap-3 d-flex flex-column">
+              <ul className="list-unstyled mb-0 gap-2 gap-md-3 d-flex flex-column">
                 <li>
                   <a href="#" className="text-white">Product 1</a>
                 </li>
@@ -286,9 +286,9 @@ function App() {
               </ul>
             </div>
 
-            <div className="col-lg-3 col-md-6 mb-4 gap-3 gap-sm-1 d-flex flex-column">
+            <div className="col-lg-3 col-md-6 mb-5 mb-lg-0 gap-3 gap-sm-1 d-flex flex-column">
               <h5 className="text-uppercase fw-bold fs-4">Useful Links</h5>
-              <ul className="list-unstyled mb-0 gap-3 d-flex flex-column">
+              <ul className="list-unstyled mb-0 gap-2 gap-md-3 d-flex flex-column">
                 <li>
                   <a href="#" className="text-white">Pricing</a>
                 </li>
@@ -304,9 +304,9 @@ function App() {
               </ul>
             </div>
 
-            <div className="col-lg-3 col-md-6 mb-4 gap-3 gap-sm-1 d-flex flex-column">
+            <div className="col-lg-3 col-md-6 mb-5 mb-lg-0 gap-3 gap-sm-1 d-flex flex-column">
               <h5 className="text-uppercase fw-bold fs-4">Contact</h5>
-              <ul className="list-unstyled mb-0 gap-3 d-flex flex-column">
+              <ul className="list-unstyled mb-0 gap-2 gap-md-3 d-flex flex-column">
                 <li>
                   <a href="#" className="text-white"><i className="bi bi-house-door-fill me-3"></i><span>New York, NY 69420, US</span></a>
                 </li>
