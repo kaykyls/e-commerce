@@ -8,7 +8,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 function App() {
   return (
     <div className="App">
-      <div className="header-container border-bottom">
+      <div className="header-container container-sm border-bottom">
         <div className="header-wrapper">
           <div className="logo">
             <h1>
@@ -29,7 +29,7 @@ function App() {
         </div>
       </div>
 
-      <div className="navbar-container border-bottom">
+      <div className="navbar-container container-sm border-bottom">
           <div className="navbar-wrapper">
           <nav className="navbar navbar-expand-sm">
             <div className="container-fluid">
@@ -64,13 +64,14 @@ function App() {
           </div>
         </div>
 
-        <div className="info mt-5">
-          <div className="h3">
-            <h3>Recommended</h3>
-          </div>
-        </div>
+        
 
-        <div className="slider-container">
+        <div className="slider-container container-sm">
+          <div className="info mt-5">
+            <div className="h3">
+              <h3>Recommended</h3>
+            </div>
+          </div>
           <div id='recommended-carousel' className="carousel slide carousel-dark" data-bs-ride="carousel">
           <div className="carousel-indicators">
             <button type="button" data-bs-target="#recommended-carousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -118,7 +119,7 @@ function App() {
         </div>
         
         
-        <div className="cards-container">
+        <div className="cards-container container-sm">
           <div className="row row-cols-1 g-4 row-cols-lg-3 row-cols-md-2">
             <div className="col">
               <div className="card">
