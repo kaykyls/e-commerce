@@ -15,14 +15,14 @@ function App() {
             <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
               </button>
-            <a className="navbar-brand" href="#"><h1>Shoes</h1></a>
+            <a className="navbar-brand" href="#"><h1 className="fs-1 fw-bold">Shoes</h1></a>
               <div className="offcanvas offcanvas-start" tabIndex={-1} id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div className="offcanvas-header">
-                  <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                  <h5 className="offcanvas-title fs-1 fw-bold" id="offcanvasNavbarLabel">Shoes</h5>
                   <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div className="offcanvas-body">
-                <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <ul className="navbar-nav justify-content-end flex-grow-1">
                   <li className="nav-item">
                     <a className="nav-link active" aria-current="page" href="#">Home</a>
                   </li>
@@ -49,7 +49,7 @@ function App() {
           </nav>
           <div className="logo">
             <a href='#'>
-              <h1>Shoes</h1>
+              <h1 className="fs-1 fw-bold">Shoes</h1>
             </a>
           </div>
           <div className="search">
@@ -80,7 +80,7 @@ function App() {
                 <span className="navbar-toggler-icon"></span>
               </button>
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul className="navbar-nav me-auto mb-2 mb-lg-0 fs-5">
                   <li className="nav-item">
                     <a className="nav-link active" aria-current="page" href="#">Home</a>
                   </li>
@@ -109,7 +109,7 @@ function App() {
 
         
 
-        <div className="slider-container">
+        <div className="slider-container mb-5">
           {/* <div className="info mt-5">
             <div className="h3">
               <h3>Recommended</h3>
@@ -156,7 +156,7 @@ function App() {
         </div>
 
         <div className="cards-container container-sm">
-        <div className="info mt-5">
+        <div className="info">
           <div className="h3">
             <h3>Featured</h3>
           </div>
@@ -223,6 +223,115 @@ function App() {
             </div>
           </div>
         </div>
+
+    <footer className="bg-dark text-center text-white mt-5">
+      <div className="container p-5">
+        <section className="mb-4 border-bottom d-flex pb-4 justify-content-md-between justify-content-center">
+          <div className="me-5 d-none d-md-block">
+            <span className='fs-5'>Follow us on social networks:</span>
+          </div>
+
+          <div className="icons d-flex gap-4">
+            <a href="" className="link-secondary">
+              <i className="bi bi-facebook text-white"></i>
+            </a>
+            <a href="" className="link-secondary">
+              <i className="bi bi-twitter text-white"></i>
+            </a>
+            <a href="" className="link-secondary">
+              <i className="bi bi-instagram text-white"></i>
+            </a>
+            <a href="" className="link-secondary">
+              <i className="bi bi-linkedin text-white"></i>
+            </a>
+          </div>
+          
+        </section>
+
+        <section className="">
+          <div className="row text-center text-md-start">
+            <div className="col-lg-3 col-md-6 mb-4 gap-3 gap-sm-1 d-flex flex-column">
+              <h5 className="text-uppercase fw-bold fs-4">Company</h5>
+              <ul className="list-unstyled mb-0 gap-3 d-flex flex-column">
+                <li>
+                  <a href="#" className="text-white">About Us</a>
+                </li>
+                <li>
+                  <a href="#" className="text-white">Our services</a>
+                </li>
+                <li>
+                  <a href="#" className="text-white">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#" className="text-white">Affiliate Program</a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="col-lg-3 col-md-6 mb-4 gap-3 gap-sm-1 d-flex flex-column">
+              <h5 className="text-uppercase fw-bold fs-4">Products</h5>
+              <ul className="list-unstyled mb-0 gap-3 d-flex flex-column">
+                <li>
+                  <a href="#" className="text-white">Product 1</a>
+                </li>
+                <li>
+                  <a href="#" className="text-white">Product 2</a>
+                </li>
+                <li>
+                  <a href="#" className="text-white">Product 3</a>
+                </li>
+                <li>
+                  <a href="#" className="text-white">Product 4</a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="col-lg-3 col-md-6 mb-4 gap-3 gap-sm-1 d-flex flex-column">
+              <h5 className="text-uppercase fw-bold fs-4">Useful Links</h5>
+              <ul className="list-unstyled mb-0 gap-3 d-flex flex-column">
+                <li>
+                  <a href="#" className="text-white">Pricing</a>
+                </li>
+                <li>
+                  <a href="#" className="text-white">Settings</a>
+                </li>
+                <li>
+                  <a href="#" className="text-white">Orders</a>
+                </li>
+                <li>
+                  <a href="#" className="text-white">Help</a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="col-lg-3 col-md-6 mb-4 gap-3 gap-sm-1 d-flex flex-column">
+              <h5 className="text-uppercase fw-bold fs-4">Contact</h5>
+              <ul className="list-unstyled mb-0 gap-3 d-flex flex-column">
+                <li>
+                  <a href="#" className="text-white"><i className="bi bi-house-door-fill me-3"></i><span>New York, NY 69420, US</span></a>
+                </li>
+                <li>
+                  <a href="#" className="text-white"><i className="bi bi-envelope-fill me-3"></i><span>e-commerce-kaykyls@email.com</span></a>
+                </li>
+                <li>
+                  <a href="#" className="text-white"><i className="bi bi-telephone-fill me-3"></i><span>+ 01 234 567 89</span></a>
+                </li>
+                <li>
+                  <a href="#" className="text-white"><i className="bi bi-whatsapp me-3"></i><span>+ 98 765 432 10</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div className="text-center p-3" style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
+        © 2023 {new Date().getFullYear()}{' '}
+        <a className="text-white" href="https://e-commerce-kaykyls.vercel.app/">
+          e-commerce-kaykyls.vercel.app
+        </a>
+      </div>
+    </footer>
     </div>
   );
 }
