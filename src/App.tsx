@@ -8,8 +8,44 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 function App() {
   return (
     <div className="App">
-      <div className="header-container container-sm border-bottom">
-        <div className="header-wrapper">
+      <div className="header-container border-bottom">
+        <div className="header-wrapper container-sm">
+        <nav className="navbar navbar-expand-sm">
+            <div className="container-fluid">
+            <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+              </button>
+              <div className="offcanvas offcanvas-start" tabIndex={-1} id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div className="offcanvas-header">
+                  <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                  <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div className="offcanvas-body">
+                <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li className="nav-item">
+                    <a className="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li className="nav-item dropdown">
+                    <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Categories
+                    </a>
+                    <ul className="dropdown-menu">
+                      <li><a className="dropdown-item" href="#">category 1</a></li>
+                      <li><a className="dropdown-item" href="#">category 2</a></li>
+                      <li><a className="dropdown-item" href="#">category 3</a></li>
+                    </ul>
+                  </li>
+                  <li className="nav-item">
+                    <a href="#" className="nav-link">Offers</a>
+                  </li>
+                  <li className="nav-item">
+                    <a href="#" className="nav-link">Sell</a>
+                  </li>
+                </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
           <div className="logo">
             <h1>
               <span>Shoes</span>
@@ -29,8 +65,14 @@ function App() {
         </div>
       </div>
 
-      <div className="navbar-container container-sm border-bottom">
-          <div className="navbar-wrapper">
+      <div className="navbar-container border-bottom">
+          <div className="navbar-wrapper container-sm">
+          <div className="search">
+            <form className="d-flex" role="search">
+              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+              <button className="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
           <nav className="navbar navbar-expand-sm">
             <div className="container-fluid">
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -112,14 +154,12 @@ function App() {
           </div>
         </div>
 
+        <div className="cards-container container-sm">
         <div className="info mt-5">
           <div className="h3">
             <h3>Popular Products</h3>
           </div>
         </div>
-        
-        
-        <div className="cards-container container-sm">
           <div className="row row-cols-1 g-4 row-cols-lg-3 row-cols-md-2">
             <div className="col">
               <div className="card">
@@ -166,41 +206,6 @@ function App() {
               </div>
               </div>
           </div>
-          
-
-         
-
-          
-
-          {/* <div className="row row-cols-1 row-cols-md-2 g-4">
-  <div className="col">
-    <div className="card">
-      <img src="..." className="card-img-top" alt="..."/>
-      <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-  <div className="col">
-    <div className="card">
-      <img src="..." className="card-img-top" alt="..."/>
-      <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-  <div className="col">
-    <div className="card">
-      <img src="..." className="card-img-top" alt="..."/>
-      <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-  </div>
-  </div> */}
         </div>
     </div>
   );

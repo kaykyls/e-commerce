@@ -34,15 +34,11 @@
   }
 }
 
-.navbar-wrapper {
-  // margin: 0 16rem;
-}
-
 .navbar-expand-sm {
 
-  .container-fluid {
-    justify-content: center !important;
-  }
+  // .container-fluid {
+  //   justify-content: center !important;
+  // }
 }
 
 .nav-link {
@@ -64,10 +60,6 @@
 }
 
 .cards-container {
-  display: flex;
-  // margin: 0 16rem;
-  // gap: 2rem;
-  justify-content: space-between;
 
   .card {
     // width: 400px;
@@ -93,5 +85,40 @@
 
   .current-price {
     font-weight: bold;
+  }
+}
+
+.header-wrapper {
+  .navbar {
+    display: none;
+  }
+}
+
+.navbar-wrapper {
+  .search {
+    display: none;
+    padding: 1rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-wrapper {
+    .search {
+      display: none;
+    }
+
+    .navbar {
+      display: block;
+    }
+  }
+
+  .navbar-wrapper {
+    .navbar {
+      display: none;
+    }
+
+    .search {
+      display: block;
+    }
   }
 }
