@@ -15,6 +15,7 @@ function App() {
             <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
               </button>
+            <a className="navbar-brand" href="#"><h1>Shoes</h1></a>
               <div className="offcanvas offcanvas-start" tabIndex={-1} id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div className="offcanvas-header">
                   <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
@@ -47,14 +48,14 @@ function App() {
             </div>
           </nav>
           <div className="logo">
-            <h1>
-              <span>Shoes</span>
-            </h1>
+            <a href='#'>
+              <h1>Shoes</h1>
+            </a>
           </div>
           <div className="search">
             <form className="d-flex" role="search">
               <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-              <button className="btn btn-outline-success" type="submit">Search</button>
+              <button className="btn btn-secondary" type="submit"><i className="bi bi-search"></i></button>
             </form>
           </div>
           <div className="buttons">
@@ -70,7 +71,7 @@ function App() {
           <div className="search">
             <form className="d-flex" role="search">
               <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-              <button className="btn btn-outline-success" type="submit">Search</button>
+              <button className="btn btn-secondary" type="submit"><i className="bi bi-search"></i></button>
             </form>
           </div>
           <nav className="navbar navbar-expand-sm">
@@ -108,12 +109,12 @@ function App() {
 
         
 
-        <div className="slider-container container-sm">
-          <div className="info mt-5">
+        <div className="slider-container">
+          {/* <div className="info mt-5">
             <div className="h3">
               <h3>Recommended</h3>
             </div>
-          </div>
+          </div> */}
           <div id='recommended-carousel' className="carousel slide carousel-dark" data-bs-ride="carousel">
           <div className="carousel-indicators">
             <button type="button" data-bs-target="#recommended-carousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -123,24 +124,24 @@ function App() {
             <div className="carousel-inner">
               <div className="carousel-item active" data-bs-interval="5000">
                 <img src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" className="d-block w-100" alt="..."/>
-                <div className="carousel-caption d-none d-md-block">
+                {/* <div className="carousel-caption d-none d-md-block">
                   <h5>This is a shoe</h5>
                   <p>Just some nice shoe passing through.</p>
-                </div>
+                </div> */}
               </div>
               <div className="carousel-item" data-bs-interval="5000">
                 <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1025&q=80" className="d-block w-100" alt="..."/>
-                <div className="carousel-caption d-none d-md-block">
+                {/* <div className="carousel-caption d-none d-md-block">
                   <h5>This is a shoe</h5>
                   <p>Just some nice shoe passing through.</p>
-                </div>
+                </div> */}
               </div>
               <div className="carousel-item" data-bs-interval="5000">
                 <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" className="d-block w-100" alt="..."/>
-                <div className="carousel-caption d-none d-md-block">
+                {/* <div className="carousel-caption d-none d-md-block">
                   <h5>This is a shoe</h5>
                   <p>Just some nice shoe passing through.</p>
-                </div>
+                </div> */}
               </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#recommended-carousel" data-bs-slide="prev">
@@ -157,21 +158,21 @@ function App() {
         <div className="cards-container container-sm">
         <div className="info mt-5">
           <div className="h3">
-            <h3>Popular Products</h3>
+            <h3>Featured</h3>
           </div>
         </div>
-          <div className="row row-cols-1 g-4 row-cols-lg-3 row-cols-md-2">
+          <div className="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-2 g-sm-3">
             <div className="col">
               <div className="card">
                 <img src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" className="card-img-top" alt="..."/>
                 <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
-                  <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <h5 className="card-title">Adidas 1</h5>
+                  {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
                   <div className='price'>
                     <p className='previous-price'>$99.99</p>
                     <p className='current-price'>$49.99</p>
                   </div>
-                  <a href="#" className="btn btn-primary">Go to Product</a>
+                  {/* <a href="#" className="btn btn-primary">Go to Product</a> */}
                 </div>
               </div>
             </div>
@@ -180,13 +181,13 @@ function App() {
               <div className="card">
                 <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1025&q=80" className="card-img-top" alt="..."/>
                 <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
-                  <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <h5 className="card-title">Nike 1</h5>
+                  {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
                   <div className='price'>
                     <p className='previous-price'>$99.99</p>
                     <p className='current-price'>$49.99</p>
                   </div>
-                  <a href="#" className="btn btn-primary">Go to Product</a>
+                  {/* <a href="#" className="btn btn-primary">Go to Product</a> */}
                 </div>
               </div>
             </div>
@@ -195,16 +196,31 @@ function App() {
               <div className="card">
                 <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" className="card-img-top" alt="..."/>
                 <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
-                  <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <h5 className="card-title">Nike 2</h5>
+                  {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
                   <div className='price'>
                     <p className='previous-price'>$99.99</p>
                     <p className='current-price'>$49.99</p>
                   </div>
-                  <a href="#" className="btn btn-primary">Go to Product</a>
+                  {/* <a href="#" className="btn btn-primary">Go to Product</a> */}
                 </div>
               </div>
+            </div>
+
+            <div className="col">
+              <div className="card">
+                <img src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" className="card-img-top" alt="..."/>
+                <div className="card-body">
+                  <h5 className="card-title">Adidas 1</h5>
+                  {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
+                  <div className='price'>
+                    <p className='previous-price'>$99.99</p>
+                    <p className='current-price'>$49.99</p>
+                  </div>
+                  {/* <a href="#" className="btn btn-primary">Go to Product</a> */}
+                </div>
               </div>
+            </div>
           </div>
         </div>
     </div>
