@@ -226,7 +226,7 @@ function App() {
 
     <footer className="bg-dark text-center text-white mt-5">
       <div className="container p-5">
-        <section className="mb-4 border-bottom d-flex pb-4 justify-content-md-between justify-content-center">
+        <section className="mb-5 d-flex justify-content-md-between justify-content-center">
           <div className="me-5 d-none d-md-block">
             <span className='fs-5'>Follow us on social networks:</span>
           </div>
@@ -326,7 +326,7 @@ function App() {
       </div>
 
       <div className="text-center p-3" style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-        © 2023 {new Date().getFullYear()}{' '}
+        © 2023-{new Date().getFullYear()}{' '}
         <a className="text-white" href="https://e-commerce-kaykyls.vercel.app/">
           e-commerce-kaykyls.vercel.app
         </a>
