@@ -286,7 +286,7 @@ function App() {
               </ul>
             </div>
 
-            <div className="col-lg-3 col-md-6 mb-5 mb-lg-0 gap-3 gap-sm-1 d-flex flex-column">
+            <div className="col-lg-3 col-md-6 mb-5 mb-md-0 mb-lg-0 gap-3 gap-sm-1 d-flex flex-column">
               <h5 className="text-uppercase fw-bold fs-4">Useful Links</h5>
               <ul className="list-unstyled mb-0 gap-2 gap-md-3 d-flex flex-column">
                 <li>
@@ -304,7 +304,7 @@ function App() {
               </ul>
             </div>
 
-            <div className="col-lg-3 col-md-6 mb-5 mb-lg-0 gap-3 gap-sm-1 d-flex flex-column">
+            <div className="col-lg-3 col-md-6 mb-0 mb-lg-0 gap-3 gap-sm-1 d-flex flex-column">
               <h5 className="text-uppercase fw-bold fs-4">Contact</h5>
               <ul className="list-unstyled mb-0 gap-2 gap-md-3 d-flex flex-column">
                 <li>
