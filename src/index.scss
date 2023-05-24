@@ -5,27 +5,6 @@
   font-family: lato;
 }
 
-.header-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
-
-  .buttons {
-    display: flex;
-    gap: 1rem;
-    font-size: 2rem;
-
-    i {
-      cursor: pointer;
-    }
-  }
-
-  .search {
-    width: 50%;
-  }
-}
-
 .navbar-expand-sm {
   .container-fluid {
     padding: 0;
@@ -35,13 +14,6 @@
       border: none;
     }
   }
-}
-
-.navbar-toggler:focus,
-.navbar-toggler:active,
-.navbar-toggler-icon:focus {
-    outline: none !important;
-    box-shadow: none !important;
 }
 
 .card {
@@ -58,7 +30,7 @@
 .carousel-item {
 
   img {
-    height: 500px;
+    height: 600px;
     object-fit: cover;
   }
 }
@@ -66,8 +38,6 @@
 .cards-container {
 
   .card {
-    // width: 400px;
-
     img {
       height: 200px;
       object-fit: cover;
@@ -85,19 +55,6 @@
 
   .current-price {
     font-weight: bold;
-  }
-}
-
-.header-wrapper {
-  .navbar {
-    display: none;
-  }
-}
-
-.navbar-wrapper {
-  .search {
-    display: none;
-    padding: 1rem 0;
   }
 }
 

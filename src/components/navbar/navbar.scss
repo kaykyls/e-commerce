@@ -1,0 +1,18 @@
+.navbar-wrapper {
+    .search {
+      display: none;
+      padding: 1rem 0;
+    }
+  }
+
+@media (max-width: 576px) {
+    .navbar-wrapper {
+        .navbar {
+          display: none;
+        }
+    
+        .search {
+          display: block;
+        }
+    }
+}

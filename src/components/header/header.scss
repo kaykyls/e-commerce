@@ -1,0 +1,48 @@
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      font-size: 2rem;
+  
+      i {
+        cursor: pointer;
+      }
+    }
+  
+    .search {
+      width: 50%;
+    }
+
+    .navbar {
+        display: none;
+      }
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+@media (max-width: 576px) {
+    .header-wrapper {
+      .search {
+        display: none;
+      }
+  
+      .navbar {
+        display: block;
+      }
+    }
+  
+    .logo {
+      display: none;
+    }
+  
+    
+}
