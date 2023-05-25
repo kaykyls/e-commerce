@@ -1,0 +1,12 @@
+.price {
+    display: flex;
+    gap: .5rem;
+  
+    .previous-price {
+      text-decoration: line-through;
+    }
+  
+    .current-price {
+      font-weight: bold;
+    }
+}

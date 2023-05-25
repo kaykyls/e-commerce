@@ -6,11 +6,11 @@ const Header = () => {
         <div className="header-container border-bottom">
             <div className="header-wrapper pb-3 pt-3 container-sm">
                 <nav className="navbar navbar-expand-sm">
-                    <div className="container-fluid">
-                        <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <div className="container-fluid p-0 gap-3">
+                        <button className="navbar-toggler p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
-                        <a className="navbar-brand" href="#"><h1 className="fs-1 fw-bold">Shoes</h1></a>
+                        <a className="navbar-brand p-0 m-0" href="#"><h1 className="fs-1 fw-bold">Shoes</h1></a>
                         <div className="offcanvas offcanvas-start" tabIndex={-1} id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                             <div className="offcanvas-header">
                                 <h5 className="offcanvas-title fs-1 fw-bold" id="offcanvasNavbarLabel">Shoes</h5>

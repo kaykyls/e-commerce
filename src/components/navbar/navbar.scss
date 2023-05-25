@@ -3,7 +3,15 @@
       display: none;
       padding: 1rem 0;
     }
+}
+
+.navbar-expand-sm {
+  .container-fluid {
+    .navbar-toggler {
+      border: none;
+    }
   }
+}
 
 @media (max-width: 576px) {
     .navbar-wrapper {

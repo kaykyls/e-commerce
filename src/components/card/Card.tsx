@@ -1,4 +1,5 @@
 import React from 'react'
+import './card.scss'
 
 interface CardProps {
     title: string,
