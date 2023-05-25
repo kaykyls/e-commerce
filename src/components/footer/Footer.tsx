@@ -4,6 +4,8 @@ import './footer.scss'
 const Footer = () => {
     const [currentYear] = useState(new Date().getFullYear())
 
+    // TODO: Transformar cada row em um componente
+
     return (
         <footer className="bg-dark text-center text-white mt-5">
             <div className="container p-5">
@@ -22,7 +24,7 @@ const Footer = () => {
                             <i className="bi bi-instagram text-white"></i>
                         </a>
                         <a href="" className="link-secondary">
-                            <i className="bi bi-linkedin text-white"></i>
+                            <i className="bi bi-youtube text-white"></i>
                         </a>
                     </div>
                 </div>

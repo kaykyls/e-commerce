@@ -47,9 +47,9 @@ const Card = ({ title, rating, previousPrice, currentPrice, image }: CardProps) 
                         {renderStars()}
                     </div>
                     <div className='price'>
-                    <p className='previous-price'>{previousPrice}</p>
-                    <p className='current-price'>{currentPrice}</p>
-                </div>
+                        <p className='previous-price mb-0'>${previousPrice}</p>
+                        <p className='current-price mb-0 fs-5'>${currentPrice}</p>
+                    </div>
             </div>
         </div>
     </div>

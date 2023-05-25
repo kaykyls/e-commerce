@@ -1,9 +1,15 @@
 .price {
     display: flex;
-    gap: .5rem;
+    flex-direction: column;
+    // gap: .5rem;
+
+    // p {
+    //     margin-bottom: 0;
+    // }
   
     .previous-price {
       text-decoration: line-through;
+      color: #939393;
     }
   
     .current-price {
