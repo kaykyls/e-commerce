@@ -1,12 +1,34 @@
 import React from 'react'
+import { useParams } from 'react-router-dom';
 import './product.scss'
+import { products } from '../../api';
+import { useEffect, useState } from 'react';
+
 
 const Product = () => {
-    const rating = 4;
+    const { id } = useParams();
 
+    const [productId, setProductId] = useState<number>(0);
+    const [product, setProduct] = useState<any>(null);
+
+    const getProduct = (id: number) => {
+        console.log(id);
+        return products.find(product => product.id === id); // Usando o método "find" para retornar o primeiro item correspondente
+    }
+
+    useEffect(() => {
+        const parsedId = parseInt(id || '', 10);
+        setProductId(parsedId);
+
+        const filteredProduct = getProduct(parsedId);
+        setProduct(filteredProduct);
+    }, [id]);
+
+    console.log(product)
+      
     const renderStars = () => {
         const stars = [];
-        const filledStars = Math.floor(rating);
+        const filledStars = Math.floor(product?.rating);
         let key = 0;
     
         for (let i = 0; i < filledStars; i++) {
@@ -14,7 +36,7 @@ const Product = () => {
             key++;
         }
     
-        if (rating % 1 !== 0) {
+        if (product?.rating % 1 !== 0) {
             stars.push(<i className="bi bi-star-half" key={key}></i>);
             key++
             for (let i = 0; i < 4 - filledStars; i++) {
@@ -35,7 +57,7 @@ const Product = () => {
         <div className='product-container container mt-5'>
             <div className="row">
                 <div className="col-md-6">
-                    <img className="img-fluid rounded" src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="product"/>
+                    <img className="product-image img-fluid rounded" src={product?.image} alt="product"/>
                     <div className="images container-fluid p-0 gap-2 justify-content-between d-flex overflow-x-hidden">
                         <img className="img-thumbnail" src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="product"/>
                         <img className="img-thumbnail" src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="product"/>
@@ -44,36 +66,31 @@ const Product = () => {
                     </div>
                 </div>
                 <div className="col-md-6">
-                    <h1 className="product-title fs-3 mb-2">Adidas 1</h1>
-                    <div className="product-price mb-2"><span className='fs-4'>$99.99</span></div>
+                    <h1 className="product-title fs-3 mb-2">{product?.title}</h1>
+                    <div className="product-price mb-2"><span className='fs-4'>${product?.currentPrice}</span></div>
                     <div className="product-rating">
                         {renderStars()}
-                        <span className='ms-2 total-ratings'>55 Reviews</span>
+                        <span className='ms-2 total-ratings'>1739 Reviews</span>
                     </div>
-                    <div className="options d-flex">
-                        <div className="form d-flex container-fluid p-0">
-                            <div className="size col-md-6">
-                            <div className="size-label">
-                                <label htmlFor="size">Size</label>
-                            </div>
-                            <select id='size' className="form-select">
+                    <div className="options form p-0 mb-3 row row-cols-md-2">
+                        <div className="size">
+                            <label htmlFor="size">Size</label>
+                            <select id="size" className="form-select">
                                 <option value="1">38</option>
                                 <option value="2">39</option>
                                 <option value="3">40</option>
                             </select>
-                            </div>
-                            <div className="quantity col-md-6">
-                            <div className="size-label">
-                                <label htmlFor="quantity">Quantity</label>
-                            </div>
+                        </div>
+                        <div className="quantity">
+                            <label htmlFor="quantity">Quantity</label>
                             <select id="quantity" className="form-select">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                             </select>
-                            </div>
                         </div>
                     </div>
+
 
                     <div className="buttons d-flex flex-column gap-2">
                         <button className="btn btn-dark">Add to Cart</button>

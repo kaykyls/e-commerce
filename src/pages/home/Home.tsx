@@ -43,7 +43,7 @@ const Home = () => {
     
     const mostSoldProducts = [
         {
-            id: 1,
+            id: 5,
             title: "Nike 3",
             rating: 4.5,
             previousPrice: 99.99,
@@ -51,7 +51,7 @@ const Home = () => {
             image: "https://images.unsplash.com/photo-1605348532760-6753d2c43329?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
         },
         {
-            id: 2,
+            id: 6,
             title: "Nike 4",
             rating: 2.5,
             previousPrice: 99.99,
@@ -59,7 +59,7 @@ const Home = () => {
             image: "https://images.unsplash.com/photo-1524532787116-e70228437bbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
         },
         {
-            id: 3,
+            id: 7,
             title: "Puma 1",
             rating: 4,
             previousPrice: 49.99,
@@ -67,7 +67,7 @@ const Home = () => {
             image: "https://images.unsplash.com/photo-1608231387042-66d1773070a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
         },
         {
-            id: 4,
+            id: 8,
             title: "All Star 1",
             rating: 3,
             previousPrice: 99.99,
@@ -78,7 +78,7 @@ const Home = () => {
     
     const newProducts = [
         {
-            id: 1,
+            id: 9,
             title: "Idk 2",
             rating: 3,
             previousPrice: 99.99,
@@ -86,7 +86,7 @@ const Home = () => {
             image: "https://images.unsplash.com/photo-1542280756-74b2f55e73ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
         },
         {
-            id: 2,
+            id: 10,
             title: "Puma 2",
             rating: 4,
             previousPrice: 99.99,
@@ -94,7 +94,7 @@ const Home = () => {
             image: "https://images.unsplash.com/photo-1605034313761-73ea4a0cfbf3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80"
         },
         {
-            id: 3,
+            id: 11,
             title: "New Balance 1",
             rating: 4,
             previousPrice: 49.99,
@@ -102,7 +102,7 @@ const Home = () => {
             image: "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1112&q=80"
         },
         {
-            id: 4,
+            id: 12,
             title: "Nike 6",
             rating: 4.5,
             previousPrice: 99.99,

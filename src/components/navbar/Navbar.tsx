@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './navbar.scss'
 
 const Navbar = () => {
@@ -19,23 +20,23 @@ const Navbar = () => {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0 fs-5">
                                 <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" href="#">Home</a>
+                                    <Link to={"/"} className="nav-link active" aria-current="page">Home</Link>
                                 </li>
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Categories
                                     </a>
                                     <ul className="dropdown-menu">
-                                        <li><a className="dropdown-item" href="#">category 1</a></li>
-                                        <li><a className="dropdown-item" href="#">category 2</a></li>
-                                        <li><a className="dropdown-item" href="#">category 3</a></li>
+                                        <li><Link to={"#"} className="dropdown-item">category 1</Link></li>
+                                        <li><Link to={"#"} className="dropdown-item">category 2</Link></li>
+                                        <li><Link to={"#"} className="dropdown-item">category 3</Link></li>
                                     </ul>
                                 </li>
-                                <li className="nav-item">
-                                    <a href="#" className="nav-link">Offers</a>
+                                <li className="nav-item fs-5">
+                                    <Link to={"#"} className="nav-link">Offers</Link>
                                 </li>
-                                <li className="nav-item">
-                                    <a href="#" className="nav-link">Sell</a>
+                                <li className="nav-item fs-5">
+                                    <Link to={"#"} className="nav-link">Sell</Link>
                                 </li>
                             </ul>
                         </div>

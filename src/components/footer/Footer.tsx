@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './footer.scss'
 
 const Footer = () => {
@@ -39,16 +40,16 @@ const Footer = () => {
                             <h5 className="text-uppercase fw-bold fs-4">Company</h5>
                             <ul className="list-unstyled mb-0 gap-2 gap-md-3 d-flex flex-column">
                                 <li>
-                                    <a href="#" className="text-white">About Us</a>
+                                    <Link to={"#"} className="text-white">About Us</Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-white">Our services</a>
+                                    <Link to={"#"} className="text-white">Our services</Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-white">Privacy Policy</a>
+                                    <Link to={"#"} className="text-white">Privacy Policy</Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-white">Affiliate Program</a>
+                                    <Link to={"#"} className="text-white">Affiliate Program</Link>
                                 </li>
                             </ul>
                         </div>
@@ -57,16 +58,16 @@ const Footer = () => {
                             <h5 className="text-uppercase fw-bold fs-4">Products</h5>
                             <ul className="list-unstyled mb-0 gap-2 gap-md-3 d-flex flex-column">
                                 <li>
-                                    <a href="#" className="text-white">Product 1</a>
+                                    <Link to={"#"} className="text-white">Product 1</Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-white">Product 2</a>
+                                    <Link to={"#"} className="text-white">Product 2</Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-white">Product 3</a>
+                                    <Link to={"#"} className="text-white">Product 3</Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-white">Product 4</a>
+                                    <Link to={"#"} className="text-white">Product 4</Link>
                                 </li>
                             </ul>
                         </div>
@@ -75,16 +76,16 @@ const Footer = () => {
                             <h5 className="text-uppercase fw-bold fs-4">Useful Links</h5>
                             <ul className="list-unstyled mb-0 gap-2 gap-md-3 d-flex flex-column">
                                 <li>
-                                    <a href="#" className="text-white">Pricing</a>
+                                    <Link to={"#"} className="text-white">Pricing</Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-white">Settings</a>
+                                    <Link to={"#"} className="text-white">Settings</Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-white">Orders</a>
+                                    <Link to={"#"} className="text-white">Orders</Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-white">Help</a>
+                                    <Link to={"#"} className="text-white">Help</Link>
                                 </li>
                             </ul>
                         </div>
@@ -93,16 +94,16 @@ const Footer = () => {
                             <h5 className="text-uppercase fw-bold fs-4">Contact</h5>
                             <ul className="list-unstyled mb-0 gap-2 gap-md-3 d-flex flex-column">
                                 <li>
-                                    <a href="#" className="text-white"><i className="bi bi-house-door-fill me-1 me-md-3"></i><span>New York, NY 69420, US</span></a>
+                                    <Link to={"#"} className="text-white"><i className="bi bi-house-door-fill me-1 me-md-3"></i><span>New York, NY 69420, US</span></Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-white"><i className="bi bi-envelope-fill me-1 me-md-3"></i><span>e-commerce-kaykyls@email.com</span></a>
+                                    <Link to={"#"} className="text-white"><i className="bi bi-envelope-fill me-1 me-md-3"></i><span>e-commerce-kaykyls@email.com</span></Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-white"><i className="bi bi-telephone-fill me-1 me-md-3"></i><span>+ 01 234 567 89</span></a>
+                                    <Link to={"#"} className="text-white"><i className="bi bi-telephone-fill me-1 me-md-3"></i><span>+ 01 234 567 89</span></Link>
                                 </li>
                                 <li>
-                                    <a href="#" className="text-white"><i className="bi bi-whatsapp me-1 me-md-3"></i><span>+ 98 765 432 10</span></a>
+                                    <Link to={"#"} className="text-white"><i className="bi bi-whatsapp me-1 me-md-3"></i><span>+ 98 765 432 10</span></Link>
                                 </li>
                             </ul>
                         </div>

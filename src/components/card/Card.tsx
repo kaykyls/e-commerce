@@ -1,7 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import './card.scss'
 
 interface CardProps {
+    id: number,
     title: string,
     rating: number,
     previousPrice: number,
@@ -9,7 +11,7 @@ interface CardProps {
     image: string
 }
 
-const Card = ({ title, rating, previousPrice, currentPrice, image }: CardProps) => {
+const Card = ({ id, title, rating, previousPrice, currentPrice, image }: CardProps) => {
     const renderStars = () => {
         const stars = [];
         const filledStars = Math.floor(rating);
@@ -38,7 +40,7 @@ const Card = ({ title, rating, previousPrice, currentPrice, image }: CardProps) 
     };    
 
     return (
-        <div className="col">
+        <Link to={`/product/${id}`} className="col">
             <div className="card">
                 <img src={image} className="card-img-top" alt="..."/>
                 <div className="card-body">
@@ -50,9 +52,9 @@ const Card = ({ title, rating, previousPrice, currentPrice, image }: CardProps) 
                         <p className='previous-price mb-0'>${previousPrice}</p>
                         <p className='current-price mb-0 fs-5'>${currentPrice}</p>
                     </div>
+                </div>
             </div>
-        </div>
-    </div>
+        </Link>
     )
 }
 

@@ -3,6 +3,7 @@ import './cards.scss'
 import Card from '../card/Card'
 
 interface Product {
+    id: number,
     title: string,
     rating: number,
     previousPrice: number,
@@ -28,6 +29,7 @@ const Cards = ({ title, products }: CardsProps) => {
                 {products.map((product, index) => (
                     <Card
                         key={index}
+                        id={product.id}
                         title={product.title}
                         rating={product.rating}
                         previousPrice={product.previousPrice}

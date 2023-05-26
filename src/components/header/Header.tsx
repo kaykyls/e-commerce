@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './header.scss'
 
 const Header = () => {
@@ -10,7 +11,7 @@ const Header = () => {
                         <button className="navbar-toggler p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
-                        <a className="navbar-brand p-0 m-0" href="#"><h1 className="fs-1 fw-bold">Shoes</h1></a>
+                        <Link to={"/"} className="navbar-brand p-0 m-0"><h1 className="fs-1 fw-bold">Shoes</h1></Link>
                         <div className="offcanvas offcanvas-start" tabIndex={-1} id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                             <div className="offcanvas-header">
                                 <h5 className="offcanvas-title fs-1 fw-bold" id="offcanvasNavbarLabel">Shoes</h5>
@@ -19,23 +20,23 @@ const Header = () => {
                             <div className="offcanvas-body">
                                 <ul className="navbar-nav justify-content-end flex-grow-1">
                                     <li className="nav-item fs-5">
-                                        <a className="nav-link active" aria-current="page" href="#">Home</a>
+                                        <Link to={"/"} className="nav-link active" aria-current="page">Home</Link>
                                     </li>
                                     <li className="nav-item dropdown">
-                                        <a className="nav-link dropdown-toggle fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <Link to={"#"} className="nav-link dropdown-toggle fs-5" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Categories
-                                        </a>
+                                        </Link>
                                         <ul className="dropdown-menu">
-                                            <li><a className="dropdown-item" href="#">category 1</a></li>
-                                            <li><a className="dropdown-item" href="#">category 2</a></li>
-                                            <li><a className="dropdown-item" href="#">category 3</a></li>
+                                            <li><Link to={"#"} className="dropdown-item">category 1</Link></li>
+                                            <li><Link to={"#"} className="dropdown-item">category 2</Link></li>
+                                            <li><Link to={"#"} className="dropdown-item">category 3</Link></li>
                                         </ul>
                                     </li>
                                     <li className="nav-item fs-5">
-                                        <a href="#" className="nav-link">Offers</a>
+                                        <Link to={"#"} className="nav-link">Offers</Link>
                                     </li>
                                     <li className="nav-item fs-5">
-                                        <a href="#" className="nav-link">Sell</a>
+                                        <Link to={"#"} className="nav-link">Sell</Link>
                                     </li>
                                 </ul>
                             </div>
@@ -43,9 +44,9 @@ const Header = () => {
                     </div>
                 </nav>
                 <div className="logo">
-                    <a href='#'>
+                    <Link to={"/"}>
                         <h1 className="fs-1 fw-bold">Shoes</h1>
-                    </a>
+                    </Link>
                 </div>
                 <div className="search">
                     <form className="d-flex" role="search">
