@@ -7,21 +7,21 @@ const Footer = () => {
     // TODO: Transformar cada row em um componente
 
     return (
-        <footer className="bg-dark text-center text-white mt-5">
+        <footer className="bg-dark text-center text-white">
             <div className="container p-5">
                 <div className="d-flex justify-content-md-between justify-content-center">
                     <div className="me-5 d-none d-md-block">
                         <span className='fs-5'>Follow us on social networks:</span>
                     </div>
                     <div className="icons d-flex gap-4">
+                    <a href="" className="link-secondary">
+                            <i className="bi bi-instagram text-white"></i>
+                        </a>
                         <a href="" className="link-secondary">
                             <i className="bi bi-facebook text-white"></i>
                         </a>
                         <a href="" className="link-secondary">
                             <i className="bi bi-twitter text-white"></i>
-                        </a>
-                        <a href="" className="link-secondary">
-                            <i className="bi bi-instagram text-white"></i>
                         </a>
                         <a href="" className="link-secondary">
                             <i className="bi bi-youtube text-white"></i>
