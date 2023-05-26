@@ -54,9 +54,9 @@ const Product = () => {
     }
 
     return (
-        <div className='product-container container mt-5'>
+        <div className='product-container container mt-3 mt-md-5'>
             <div className="row">
-                <div className="col-md-6 mb-4 mb-md-0">
+                <div className="col-md-6 mb-md-0">
                     <img className="product-image img-fluid rounded mb-3" src={product?.image} alt="product"/>
                     <div className="images d-none d-md-flex container-fluid p-0 gap-2 d-flex overflow-x-hidden">
                         <img className="img border rounded" src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="product"/>
@@ -73,8 +73,8 @@ const Product = () => {
                         {renderStars()}
                         <span className='ms-2 total-ratings'>1739 Reviews</span>
                     </div>
-                    <div className="options form p-0 mb-3 row row-cols-md-2">
-                        <div className="size">
+                    <div className="options form p-0 mb-3 row row-cols-2">
+                        <div className="size pe-1">
                             <label htmlFor="size">Size</label>
                             <select id="size" className="form-select">
                                 <option value="1">38</option>
@@ -82,7 +82,7 @@ const Product = () => {
                                 <option value="3">40</option>
                             </select>
                         </div>
-                        <div className="quantity">
+                        <div className="quantity ps-1">
                             <label htmlFor="quantity">Quantity</label>
                             <select id="quantity" className="form-select">
                                 <option value="1">1</option>
