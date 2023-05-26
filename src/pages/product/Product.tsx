@@ -56,19 +56,20 @@ const Product = () => {
     return (
         <div className='product-container container mt-5'>
             <div className="row">
-                <div className="col-md-6">
-                    <img className="product-image img-fluid rounded" src={product?.image} alt="product"/>
-                    <div className="images container-fluid p-0 gap-2 justify-content-between d-flex overflow-x-hidden">
-                        <img className="img-thumbnail" src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="product"/>
-                        <img className="img-thumbnail" src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="product"/>
-                        <img className="img-thumbnail" src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="product"/>
-                        <img className="img-thumbnail" src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="product"/>
+                <div className="col-md-6 mb-4 mb-md-0">
+                    <img className="product-image img-fluid rounded mb-3" src={product?.image} alt="product"/>
+                    <div className="images d-none d-md-flex container-fluid p-0 gap-2 d-flex overflow-x-hidden">
+                        <img className="img border rounded" src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="product"/>
+                        <img className="img border rounded" src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="product"/>
+                        <img className="img border rounded" src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="product"/>
+                        <img className="img border rounded" src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="product"/>
+                        <img className="img border rounded" src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="product"/>
                     </div>
                 </div>
                 <div className="col-md-6">
                     <h1 className="product-title fs-3 mb-2">{product?.title}</h1>
                     <div className="product-price mb-2"><span className='fs-4'>${product?.currentPrice}</span></div>
-                    <div className="product-rating">
+                    <div className="product-rating mb-3 mb-md-5">
                         {renderStars()}
                         <span className='ms-2 total-ratings'>1739 Reviews</span>
                     </div>
