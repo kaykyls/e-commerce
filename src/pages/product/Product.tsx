@@ -76,12 +76,14 @@ const Product = () => {
                         arrows: false,
                         autoplay: false,
                         pagination: false,
+                        start: selectedSlideIndex,
                         breakpoints: {
                         768: {
                             arrows: true,
-                            pagination: true
-                        }
-                        }
+                            pagination: true,
+                        },
+                        },
+                        sync: '#secondary-slider',
                     }}
                     onMoved={handleSlideChange}
                     >
@@ -90,42 +92,41 @@ const Product = () => {
                         <img className="product-image img-fluid rounded mb-5 mb-md-3" src={product?.image} alt="product" />
                         </SplideSlide>
                     ))}
-                </Splide>
-
+                    </Splide>
                 </div>
 
-
                 <div className="images d-none d-md-block">
-                        <Splide options={{
-                            perPage: 5,
-                            perMove: 1,
-                            arrows: true,
-                            gap: "1rem",
-                            autoplay: false,
-                            pagination: false,
-                            start: selectedSlideIndex,
-                            breakpoints: {
-                                1200: {
-                                    perPage: 4
-                                },
-                                992: {
-                                    perPage: 3
-                                },
-                                768: {
-                                    perPage: 0
-                                },
-                            }
-                        }}>
-                        {images.map((image, index) => {
-                            return(
-                            <SplideSlide key={index}>
-                                <div className="card" onClick={() => setSelectedSlideIndex(index)}>
-                                    <img className="img border rounded" src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="product"/>
-                                </div>
-                            </SplideSlide>
-                            )
-                        })}
-                        </Splide>
+                    <Splide
+                    id='secondary-slider'
+                    options={{
+                        perPage: 5,
+                        perMove: 1,
+                        arrows: true,
+                        gap: "1rem",
+                        autoplay: false,
+                        pagination: false,
+                        start: selectedSlideIndex,
+                        breakpoints: {
+                        1200: {
+                            perPage: 4,
+                        },
+                        992: {
+                            perPage: 3,
+                        },
+                        768: {
+                            perPage: 0,
+                        },
+                        },
+                    }}
+                    >
+                    {images.map((image, index) => (
+                        <SplideSlide key={index}>
+                        <div className="card" onClick={() => setSelectedSlideIndex(index)}>
+                            <img className="img border rounded" src={product?.image} alt="product" />
+                        </div>
+                        </SplideSlide>
+                    ))}
+                    </Splide>
                     </div>
                 </div>
                 <div className="col-md-6">
