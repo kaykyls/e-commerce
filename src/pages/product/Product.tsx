@@ -75,7 +75,7 @@ const Product = () => {
                     </div>
                     <div className="options form p-0 mb-3 row row-cols-2">
                         <div className="size pe-1">
-                            <label htmlFor="size">Size</label>
+                            <label className='fs-5' htmlFor="size">Size</label>
                             <select id="size" className="form-select">
                                 <option value="1">38</option>
                                 <option value="2">39</option>
@@ -83,7 +83,7 @@ const Product = () => {
                             </select>
                         </div>
                         <div className="quantity ps-1">
-                            <label htmlFor="quantity">Quantity</label>
+                            <label className='fs-5' htmlFor="quantity">Quantity</label>
                             <select id="quantity" className="form-select">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -91,11 +91,9 @@ const Product = () => {
                             </select>
                         </div>
                     </div>
-
-
                     <div className="buttons d-flex flex-column gap-2">
-                        <button className="btn btn-dark">Add to Cart</button>
-                        <button className="btn btn-outline-dark">Buy Now</button>
+                        <button className="btn btn-dark fs-5">Add to Cart</button>
+                        <button className="btn btn-outline-dark fs-5">Buy Now</button>
                     </div>
                 </div>
             </div>
