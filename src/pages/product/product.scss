@@ -12,6 +12,27 @@
     object-fit: cover;
 }
 
+.image-is-selected {
+    border: 2px solid rgb(147, 147, 147);
+}
+
+.product-previous-price {
+    text-decoration: line-through;
+    color: #939393;
+}
+
+.color-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+
+    .color-option-is-selected {
+        border: 2px solid rgb(147, 147, 147);
+    }
+}
+
 @media (max-width: 768px) {
     .product-image {
         height: 300px;
