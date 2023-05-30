@@ -8,6 +8,7 @@ export interface Product {
     isFeatured: boolean;
     isMostSold: boolean;
     isNew: boolean;
+    colors?: string[];
     image: string;
 }
 
@@ -22,6 +23,7 @@ export const products: Product[] = [
         isFeatured: true,
         isMostSold: false,
         isNew: false,
+        colors: ["#000", "#fff", "#f00"],
         image: "https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
     },
     {

@@ -80,14 +80,15 @@ const Product = () => {
                         options={{
                             perPage: 1,
                             perMove: 1,
-                            arrows: true,
+                            arrows: false,
                             autoplay: false,
                             pagination: true,
+                            drag: false,
                             breakpoints: {
-                            768: {
-                                arrows: true,
-                                pagination: true,
-                            },
+                                768: {
+                                    arrows: true,
+                                    pagination: true,
+                                },
                             },
                         }}
                         onMoved={handleSlideChange}    
@@ -110,15 +111,15 @@ const Product = () => {
                             autoplay: false,
                             pagination: false,
                             breakpoints: {
-                            1200: {
-                                perPage: 4,
-                            },
-                            992: {
-                                perPage: 3,
-                            },
-                            768: {
-                                perPage: 0,
-                            },
+                                1200: {
+                                    perPage: 4,
+                                },
+                                992: {
+                                    perPage: 3,
+                                },
+                                768: {
+                                    perPage: 0,
+                                },
                             },
                         }}
                         >
@@ -137,7 +138,7 @@ const Product = () => {
                             
                     <div className="product-price mb-2">
                         <span className='fs-2 fw-bold me-1 product-current-price'>${product?.currentPrice}</span>
-                        {product?.isOnSale ? <span className='fs-6 product-previous-price'>${product?.previousPrice}</span> : null}
+                        {product?.isOnSale && <span className='fs-6 product-previous-price'>${product?.previousPrice}</span>}
                     </div>
 
                     <div className="product-rating mb-3">
