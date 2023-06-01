@@ -1,18 +1,20 @@
 import React from 'react'
+import './cart.scss'
+import { products } from '../../api'
 
 const Cart = () => {
     return (
         <div className='container cart mt-5 mb-5'>
-            <div className="row">
-                <div className="col-8">
-                    <div className="cart-products">
-                        <div className="cart-product border border-3 rounded p-4 row row-cols-4">
-                            <div className="product-picture d-flex justify-content-center">
-                                <img src="https://via.placeholder.com/150" alt="product" />
+            <div className="row row-md-2">
+                <div className="col-md-8">
+                    <div className="cart-products mb-4 border rounded border-2">
+                        <div className="cart-product p-4 row row-cols-3 row-cols-md-4">
+                            <div className="product-picture d-flex justify-content-center align-items-center">
+                                <img className='rounded' src={products[4].image} alt="product" />
                             </div>
                             <div className="product-details">
                                 <div className="product-name">
-                                    <h2>Product Name</h2>
+                                    <span className='fw-bold fs-4'>Product Name</span>
                                 </div>
                                 <div className="product-color">
                                     <span>Color: Red </span>
@@ -20,19 +22,22 @@ const Cart = () => {
                                 <div className="product-size">
                                     <span>Size: 38 </span>
                                 </div>
+                                <div className="product-price d-block d-md-none mt-3">
+                                    <span className='fw-bold'>$100</span>
+                                </div>
                             </div>
-                            <div className="product-amount d-flex align-items-start justify-content-center">
-                                <button className="decrease-amount btn btn-dark border border-2">
+                            <div className="product-amount d-flex flex-column flex-md-row align-items-center align-items-start justify-content-center gap-3 gap-md-0">
+                                <button className="decrease-amount btn btn-dark border d-flex">
                                     <i className="bi bi-dash"></i>
                                 </button>
-                                <div className="d-flex align-items-center px-4 py-2">
+                                <div className="d-flex align-items-center justify-content-center px-md-4 py-md-2">
                                     <span>1</span>
                                 </div>
-                                <button className="increase-amount btn btn-dark border border-2">
+                                <button className="increase-amount btn btn-dark border">
                                     <i className="bi bi-plus"></i>
                                 </button>
                             </div>
-                            <div className="product-price d-flex flex-column justify-content-between">
+                            <div className="product-price d-none d-md-flex flex-column justify-content-between">
                                 <div className="price">
                                     <h2 className='text-center'>$100</h2>
                                 </div>
@@ -43,8 +48,8 @@ const Cart = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-4">
-                    <div className="summary border p-4  border-3 rounded d-flex flex-column gap-3">
+                <div className="col-md-4">
+                    <div className="summary border p-4 border-2 rounded d-flex flex-column gap-3">
                         <div className="summary-title">
                             <h3>Summary</h3>
                         </div>

@@ -1,3 +1,7 @@
-.amount-padding {
-    padding: 0.375rem 0.75rem !important;
+.product-picture {
+    img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+    }
 }
