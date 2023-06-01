@@ -1,8 +1,32 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './cart.scss'
 import { products } from '../../api'
+import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
+import { clearCart } from '../../redux/cartSlice'
 
 const Cart = () => {
+    let items = []
+
+    const user = useSelector((state: any) => state.user)
+    const cart = useSelector((state: any) => state.cart)
+
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        if(user.isLogged) {
+            items = [...user.cartItems, ...cart.cartItems]
+            dispatch(clearCart())
+            console.log(items)
+
+        } else {
+            items = cart.cartItems
+            console.log(items)
+        }
+    }, [user])
+
+    // const items = useSelector((state: any) => state.user.cartItems)
+
     return (
         <div className='container cart mt-5 mb-5'>
             <div className="row row-md-2">

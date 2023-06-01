@@ -5,6 +5,10 @@ import { products } from '../../api';
 import { useEffect, useState } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import "@splidejs/splide/dist/css/splide.min.css"
+import { useDispatch } from 'react-redux';
+import { addToUserCart } from '../../redux/userSlice';
+import { useSelector } from 'react-redux';
+import { addToCart } from '../../redux/cartSlice';
 
 const Product = () => {
     const { id } = useParams();
@@ -15,6 +19,10 @@ const Product = () => {
     const secondarySliderRef = useRef<Splide | null>(null);
     const [selectedSlideIndex, setSelectedSlideIndex] = useState<number>(0);
     const images: any[] = [];
+
+    const dispatch = useDispatch();
+
+    const user = useSelector((state: any) => state.user)
 
     const getProduct = (id: number) => {
         return products.find(product => product.id === id)
@@ -69,6 +77,15 @@ const Product = () => {
             primarySliderRef.current.go(index);
         }
     }
+
+    const handleAddToCart = () => {
+        if (user.isLogged) {
+          dispatch(addToUserCart(product.id));
+        } else {
+          dispatch(addToCart({ id: product.id, quantity: 1, size: product.size, color: product.color}));
+        }
+      };
+      
 
     return (
         <div className='product-container container mt-3 mt-md-5 mb-5'>
@@ -177,7 +194,7 @@ const Product = () => {
                     </div>
 
                     <div className="buttons d-flex flex-column gap-2">
-                        <button className="btn btn-dark fs-5">Add to Cart</button>
+                        <button onClick={handleAddToCart} className="btn btn-dark fs-5">Add to Cart</button>
                         <button className="btn btn-outline-dark fs-5">Buy Now</button>
                     </div>
                 </div>

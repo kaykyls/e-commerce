@@ -56,7 +56,7 @@ const Header = () => {
                 </div>
                 <div className="buttons">
                     <i className="bi bi-heart"></i>
-                    <i className="bi bi-cart"></i>
+                    <Link to={"/cart"}><i className="bi bi-cart"></i></Link>
                     <i className="bi bi-person"></i>
                 </div>
             </div>
