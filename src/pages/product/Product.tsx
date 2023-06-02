@@ -8,7 +8,9 @@ import "@splidejs/splide/dist/css/splide.min.css"
 import { useDispatch } from 'react-redux';
 import { addToUserCart } from '../../redux/userSlice';
 import { useSelector } from 'react-redux';
-import { addToCart } from '../../redux/cartSlice';
+import cartSlice, { addToCart } from '../../redux/cartSlice';
+import { updateUserCartItem } from '../../redux/userSlice';
+import { updateCartItem } from '../../redux/cartSlice';
 
 const Product = () => {
     const { id } = useParams();
@@ -23,6 +25,7 @@ const Product = () => {
     const dispatch = useDispatch();
 
     const user = useSelector((state: any) => state.user)
+    const cart = useSelector((state: any) => state.cart)
 
     const getProduct = (id: number) => {
         return products.find(product => product.id === id)
@@ -80,11 +83,31 @@ const Product = () => {
 
     const handleAddToCart = () => {
         if (user.isLogged) {
-          dispatch(addToUserCart(product.id));
+          if (user.cartItems.find((item: any) => item.id === product.id)) {
+            dispatch(updateUserCartItem(product.id));
+          } else {
+            dispatch(addToUserCart({
+              id: product.id,
+              quantity: 1,
+              size: product.size,
+              color: product.color,
+            }));
+          }
         } else {
-          dispatch(addToCart({ id: product.id, quantity: 1, size: product.size, color: product.color}));
+          if (cart.cartItems.find((item: any) => item.id === product.id)) {
+            dispatch(updateCartItem(product.id));
+          } else {
+            dispatch(addToCart({
+              id: product.id,
+              quantity: 1,
+              size: product.size,
+              color: product.color,
+            }));
+          }
         }
       };
+      
+      
       
 
     return (

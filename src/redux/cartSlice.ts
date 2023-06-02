@@ -5,25 +5,31 @@ interface CartItem {
     quantity: number;
     size: string;
     color: string;
-  }
+}
 
-  interface CartState {
-    cartItems: CartItem[];
-  }
+interface CartState {
+  cartItems: CartItem[];
+}
   
-  const initialState: CartState = {
-    cartItems: [],
-  };
+const initialState: CartState = {
+  cartItems: [],
+};
 
 const cartSlice = createSlice({
     name: 'cart',
     initialState,
     reducers: {
         addToCart: (state: any, action) => {
-            state.cartItems.push(action.payload)
+          state.cartItems.push(action.payload)
         },
         removeFromCart: (state: any, action) => {
-            state.cart = state.cart.filter((item: any) => item.id !== action.payload)
+          state.cart = state.cartItems.filter((item: any) => item.id !== action.payload)
+        },
+        updateCartItem: (state, action) => {
+            const itemToUpdate = state.cartItems.find((item: any) => item.id === action.payload)
+            if (itemToUpdate) {
+              itemToUpdate.quantity++;
+            }
         },
         clearCart: (state: any) => {
             state.cartItems = []
@@ -31,6 +37,6 @@ const cartSlice = createSlice({
     }
 })
 
-export const { addToCart, removeFromCart, clearCart } = cartSlice.actions
+export const { addToCart, removeFromCart, updateCartItem, clearCart } = cartSlice.actions
 
 export default cartSlice.reducer

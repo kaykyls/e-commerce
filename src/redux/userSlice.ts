@@ -1,28 +1,54 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+
+interface CartItem {
+  id: number;
+  quantity: number;
+  size: string;
+  color: string;
+}
+
+interface UserState {
+  isLogged: boolean;
+  name: string;
+  email: string;
+  cartItems: CartItem[];
+  wishList: any[];
+  orders: any[];
+}
+
+const initialState: UserState = {
+  isLogged: false,
+  name: "",
+  email: "",
+  cartItems: [],
+  wishList: [],
+  orders: [],
+};
 
 const userSlice = createSlice({
-    name: 'user',
-    initialState: {
-        isLogged: false,
-        name: "",
-        email: "",
-        cartItems: [],
-        wishList: [],
-        orders: []
+  name: "user",
+  initialState,
+  reducers: {
+    changeUser: (state) => {
+      state.isLogged = true;
     },
-    reducers: {
-        changeUser: (state, action) => {
-            state.isLogged = true
-        },
-        addToUserCart: (state: any, action) => {
-            state.cartItems.push(action.payload)
-        },
-        removeFromCart: (state: any, action) => {
-            state.cart = state.cart.filter((item: any) => item.id !== action.payload)
+    addToUserCart: (state, action: PayloadAction<CartItem>) => {
+      state.cartItems.push(action.payload);
+    },
+    updateUserCartItem: (state, action) => {
+        const itemToUpdate = state.cartItems.find((item: any) => item.id === action.payload)
+            if (itemToUpdate) {
+              itemToUpdate.quantity++;
         }
-    }
-})
+      },
+    removeFromCart: (state, action: PayloadAction<number>) => {
+      state.cartItems = state.cartItems.filter(
+        (item) => item.id !== action.payload
+      );
+    },
+  },
+});
 
-export const { changeUser, addToUserCart } = userSlice.actions
+export const { changeUser, addToUserCart, updateUserCartItem, removeFromCart } = userSlice.actions;
 
-export default userSlice.reducer
+export default userSlice.reducer;
