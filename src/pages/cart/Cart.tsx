@@ -40,13 +40,15 @@ const Cart = () => {
                                     </div>
                                     <div className="product-details">
                                         <div className="product-name">
-                                            <span className='fw-bold fs-4'>{product?.title}</span>
+                                            <span className='fs-4'>{product?.title}</span>
                                         </div>
                                         <div className="product-color">
                                             {/* <span>Color: {product?.color} </span> */}
+                                            <span>Color: blue </span>
                                         </div>
                                         <div className="product-size">
                                             {/* <span>Size: {product?.size} </span> */}
+                                            <span>Size: 39 </span>
                                         </div>
                                         <div className="product-price d-block d-md-none mt-3">
                                             <span className='fw-bold'>${product?.currentPrice}</span>
@@ -63,13 +65,13 @@ const Cart = () => {
                                             <i className="bi bi-plus"></i>
                                         </button>
                                     </div>
-                                    <div className="product-price d-none d-md-flex flex-column justify-content-between">
+                                    <div className="product-price d-none d-md-flex flex-column justify-content-between text-end">
                                         <div className="price">
-                                            <h2 className='text-center'>${product?.currentPrice}</h2>
+                                            <h2>${product?.currentPrice}</h2>
                                         </div>
-                                        <div className="remove-product d-flex justify-content-center">
-                                            <button className='btn btn-danger'>
-                                                <i className="bi bi-trash"></i>
+                                        <div className="remove-product d-flex justify-content-end">
+                                            <button className='remove-btn btn'>
+                                                delete
                                             </button>
                                         </div>
                                     </div>
