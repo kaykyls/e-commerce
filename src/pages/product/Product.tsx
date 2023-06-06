@@ -24,7 +24,7 @@ const Product = () => {
     const [selectedSlideIndex, setSelectedSlideIndex] = useState<number>(0);
     const images: any[] = [];
 
-    const [selectedColor, setSelectedColor] = useState<string>('blue');
+    const [selectedColor, setSelectedColor] = useState<string>('black');
     const [selectedSize, setSelectedSize] = useState<string>('39');
     const [selectedQuantity, setSelectedQuantity] = useState<number>(1);
 
