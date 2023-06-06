@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './card.scss'
 
 interface CardProps {
-    id: number,
+    id: string,
     title: string,
     rating: number,
     previousPrice: number,

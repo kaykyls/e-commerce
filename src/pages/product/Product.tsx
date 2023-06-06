@@ -15,6 +15,8 @@ import { updateCartItem } from '../../redux/cartSlice';
 const Product = () => {
     const { id } = useParams();
 
+    window.scrollTo(0, 0);
+
     // const [productId, setProductId] = useState<number>(0);
     const [product, setProduct] = useState<any>(null);
     const primarySliderRef = useRef<Splide | null>(null);
@@ -22,20 +24,32 @@ const Product = () => {
     const [selectedSlideIndex, setSelectedSlideIndex] = useState<number>(0);
     const images: any[] = [];
 
+    const [selectedColor, setSelectedColor] = useState<string>('blue');
+    const [selectedSize, setSelectedSize] = useState<string>('39');
+    const [selectedQuantity, setSelectedQuantity] = useState<number>(1);
+
+    let quantityOptions = []
+
+    for(let i = 1; i <= 20; i++) {
+        quantityOptions.push(i)
+    }
+
+    console.log(selectedQuantity)
+
     const dispatch = useDispatch();
 
     const user = useSelector((state: any) => state.user)
     const cart = useSelector((state: any) => state.cart)
 
-    const getProduct = (id: number) => {
+    const getProduct = (id: string) => {
         return products.find(product => product.id === id)
     }
 
     useEffect(() => {
-        const parsedId = parseInt(id || '', 10);
+        // const parsedId = parseInt(id || '', 10);
         // setProductId(parsedId);
 
-        const filteredProduct = getProduct(parsedId);
+        const filteredProduct = getProduct(String(id));
         setProduct(filteredProduct);
     }, [id]);
       
@@ -83,31 +97,33 @@ const Product = () => {
 
     const handleAddToCart = () => {
         if (user.isLogged) {
-          if (user.cartItems.find((item: any) => item.id === product.id)) {
-            dispatch(updateUserCartItem(product.id));
+          const existingIndex = user.cartItems.findIndex((item: { id: any; size: string; color: string; }) => item.id === product.id && item.size === selectedSize && item.color === selectedColor);
+          
+          if (existingIndex !== -1) {
+            dispatch(updateUserCartItem({product: existingIndex, quantity: selectedQuantity}));
           } else {
             dispatch(addToUserCart({
               id: product.id,
-              quantity: 1,
-              size: product.size,
-              color: product.color,
+              quantity: selectedQuantity,
+              size: selectedSize,
+              color: selectedColor,
             }));
           }
         } else {
-          if (cart.cartItems.find((item: any) => item.id === product.id)) {
-            dispatch(updateCartItem(product.id));
+          const existingIndex = cart.cartItems.findIndex((item: { id: any; size: string; color: string; }) => item.id === product.id && item.size === selectedSize && item.color === selectedColor);
+          
+          if (existingIndex !== -1) {
+            dispatch(updateCartItem({productIndex: existingIndex, quantity: selectedQuantity}));
           } else {
             dispatch(addToCart({
               id: product.id,
-              quantity: 1,
-              size: product.size,
-              color: product.color,
+              quantity: selectedQuantity,
+              size: selectedSize,
+              color: selectedColor,
             }));
           }
         }
       };
-      
-      
       
 
     return (
@@ -189,29 +205,29 @@ const Product = () => {
                     <div className="product-color mb-3">
                         <label className='fs-5' htmlFor="color">Color</label>
                         <div className="colors d-flex gap-2">
-                            <div className="color-option border border-3 rounded-circle" style={{backgroundColor: "#000"}}></div>
-                            <div className="color-option border border-3 rounded-circle" style={{backgroundColor: "#00f"}}></div>
-                            <div className="color-option border border-3 rounded-circle" style={{backgroundColor: "#fff"}}></div>
-                            <div className="color-option border border-3 border rounded-circle" style={{backgroundColor: "#eee"}}></div>
+                            <div onClick={() => setSelectedColor("black")} className={selectedColor === "black" ? "selected-color color-option border border-3 rounded-circle" : "color-option border border-3 rounded-circle"} style={{backgroundColor: "#000"}}></div>
+                            <div onClick={() => setSelectedColor("blue")} className={selectedColor === "blue" ? "selected-color color-option border border-3 rounded-circle" : "color-option border border-3 rounded-circle"} style={{backgroundColor: "#00f"}}></div>
+                            <div onClick={() => setSelectedColor("white")} className={selectedColor === "white" ? "selected-color color-option border border-3 rounded-circle" : "color-option border border-3 rounded-circle"} style={{backgroundColor: "#fff"}}></div>
+                            <div onClick={() => setSelectedColor("gray")} className={selectedColor === "gray" ? "selected-color color-option border border-3 rounded-circle" : "color-option border border-3 rounded-circle"} style={{backgroundColor: "#eee"}}></div>
                         </div>
                     </div>
 
                     <div className="options form p-0 mb-3 row row-cols-2 gx-2">
                         <div className="size">
                             <label className='fs-5' htmlFor="size">Size</label>
-                            <select id="size" className="form-select">
-                                <option value="1">38</option>
-                                <option value="2">39</option>
-                                <option value="3">40</option>
+                            <select value={selectedSize} onChange={(e) => setSelectedSize(e.target.value)} id="size" className="form-select">
+                                <option value="38">38</option>
+                                <option value="39">39</option>
+                                <option value="40">40</option>
                             </select>
                         </div>
 
                         <div className="quantity">
                             <label className='fs-5' htmlFor="quantity">Quantity</label>
-                            <select id="quantity" className="form-select">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
+                            <select value={selectedQuantity} onChange={(e) => setSelectedQuantity(Number(e.target.value))} id="quantity" className="form-select">
+                                {quantityOptions.map((option, index) => (
+                                    <option key={index} value={option}>{option}</option>
+                                ))}
                             </select>
                         </div>
                     </div>

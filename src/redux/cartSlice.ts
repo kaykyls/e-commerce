@@ -26,10 +26,15 @@ const cartSlice = createSlice({
           state.cart = state.cartItems.filter((item: any) => item.id !== action.payload)
         },
         updateCartItem: (state, action) => {
-            const itemToUpdate = state.cartItems.find((item: any) => item.id === action.payload)
+            const itemToUpdate = state.cartItems.find((item: any, index: number) => index === action.payload.productIndex)
+            console.log(itemToUpdate)
             if (itemToUpdate) {
-              itemToUpdate.quantity++;
+              console.log(action.payload.quantity)
+              itemToUpdate.quantity += action.payload.quantity;
             }
+            if(itemToUpdate?.quantity === 0) {
+              state.cartItems.splice(action.payload.productIndex, 1)
+          }
         },
         clearCart: (state: any) => {
             state.cartItems = []

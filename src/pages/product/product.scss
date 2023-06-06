@@ -33,6 +33,10 @@
     }
 }
 
+.selected-color {
+    border: #7a7a7a 4px solid !important;
+}
+
 @media (max-width: 768px) {
     .product-image {
         height: 300px;

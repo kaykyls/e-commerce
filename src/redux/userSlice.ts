@@ -36,10 +36,13 @@ const userSlice = createSlice({
       state.cartItems.push(action.payload);
     },
     updateUserCartItem: (state, action) => {
-        const itemToUpdate = state.cartItems.find((item: any) => item.id === action.payload)
+        const itemToUpdate = state.cartItems.find((item: any, index: number) => index === action.payload.product)
             if (itemToUpdate) {
-              itemToUpdate.quantity++;
-        }
+              itemToUpdate.quantity += action.payload.quantity;
+          }
+          if(itemToUpdate?.quantity === 0) {
+              state.cartItems.splice(action.payload.product, 1)
+          }
       },
     removeFromCart: (state, action: PayloadAction<number>) => {
       state.cartItems = state.cartItems.filter(

@@ -3,7 +3,7 @@ import './cards.scss'
 import Card from '../card/Card'
 
 interface Product {
-    id: number,
+    id: string,
     title: string,
     rating: number,
     previousPrice: number,
