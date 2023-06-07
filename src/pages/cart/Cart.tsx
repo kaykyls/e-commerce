@@ -7,6 +7,9 @@ import { clearCart, updateCartItem } from '../../redux/cartSlice'
 import { Link } from 'react-router-dom'
 import { updateUserCartItem } from '../../redux/userSlice'
 import { useState } from 'react'
+import Header from '../../components/header/Header'
+import Navbar from '../../components/navbar/Navbar'
+import Footer from '../../components/footer/Footer'
 
 const Cart = () => {
     let items = []
@@ -56,6 +59,9 @@ const Cart = () => {
     }
 
     return (
+        <>
+        <Header/>
+        <Navbar/>
         <div className='container cart mt-5 mb-5'>
             <div className="row row-md-2">
                 <div className="col-md-8">
@@ -146,6 +152,8 @@ const Cart = () => {
                 </div>
             </div>
         </div>
+        <Footer/>
+        </>
     )
 }
 

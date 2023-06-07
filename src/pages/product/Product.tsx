@@ -11,6 +11,9 @@ import { useSelector } from 'react-redux';
 import cartSlice, { addToCart } from '../../redux/cartSlice';
 import { updateUserCartItem } from '../../redux/userSlice';
 import { updateCartItem } from '../../redux/cartSlice';
+import Header from '../../components/header/Header'
+import Navbar from '../../components/navbar/Navbar'
+import Footer from '../../components/footer/Footer'
 
 const Product = () => {
     const { id } = useParams();
@@ -127,6 +130,9 @@ const Product = () => {
       
 
     return (
+        <>
+        <Header/>
+        <Navbar/>
         <div className='product-container container mt-3 mt-md-5 mb-5'>
             <div className="row gx-0 gx-md-4 gx-lg-5">
                 <div className="col-md-6 mb-md-0">
@@ -239,6 +245,8 @@ const Product = () => {
                 </div>
             </div>
         </div>
+        <Footer/>
+        </>
     )
 }
 
