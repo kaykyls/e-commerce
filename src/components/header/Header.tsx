@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './header.scss'
+import {FiLogOut, FiLogIn} from 'react-icons/fi'
 
 const Header = () => {
     return (
@@ -57,7 +58,18 @@ const Header = () => {
                 <div className="buttons">
                     <i className="bi bi-heart"></i>
                     <Link to={"/cart"}><i className="bi bi-cart"></i></Link>
-                    <i className="bi bi-person"></i>
+                    <div className="dropdown d-flex">
+                        <i className="bi bi-person d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                        <ul className="dropdown-menu">
+                            <li><Link to={"/login"} className="dropdown-item"><FiLogIn/> Login</Link></li>
+                            <li><hr className="dropdown-divider"/></li>
+                            <li><a className="dropdown-item" href="#">Your Profile</a></li>
+                            <li><a className="dropdown-item" href="#">Orders</a></li>
+                            <li><a className="dropdown-item" href="#">Wishlist</a></li>
+                            {/* <li><hr className="dropdown-divider"/></li>
+                            <li><a className="dropdown-item" href="#"><FiLogOut/> Logout  </a></li> */}
+                        </ul>
+                    </div>
                 </div>
             </div>
       </div>

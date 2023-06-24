@@ -1,0 +1,16 @@
+.register {
+    height: 100vh;
+  }
+  
+.register-form-wrapper {
+    border-radius: 1rem;
+    width: 25rem;
+    height: 35rem;
+}
+  
+@media (max-width: 768px) {
+    .register-form-wrapper {
+      width: 100%;
+      height: 100%;
+    }
+}
