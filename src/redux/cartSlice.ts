@@ -27,9 +27,7 @@ const cartSlice = createSlice({
         },
         updateCartItem: (state, action) => {
             const itemToUpdate = state.cartItems.find((item: any, index: number) => index === action.payload.productIndex)
-            console.log(itemToUpdate)
             if (itemToUpdate) {
-              console.log(action.payload.quantity)
               itemToUpdate.quantity += action.payload.quantity;
             }
             if(itemToUpdate?.quantity === 0) {

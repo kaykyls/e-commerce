@@ -9,7 +9,7 @@ const Navbar = () => {
                 <div className="search">
                     <form className="d-flex" role="search">
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                        <button className="btn btn-secondary" type="submit"><i className="bi bi-search"></i></button>
+                        <button className="btn btn-dark" type="submit"><i className="bi bi-search"></i></button>
                     </form>
                 </div>
                 <nav className="navbar navbar-expand-sm">
@@ -24,7 +24,7 @@ const Navbar = () => {
                                 </li>
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Categories
+                                        Categories
                                     </a>
                                     <ul className="dropdown-menu">
                                         <li><Link to={"#"} className="dropdown-item">category 1</Link></li>

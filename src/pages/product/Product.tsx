@@ -14,9 +14,11 @@ import { updateCartItem } from '../../redux/cartSlice';
 import Header from '../../components/header/Header'
 import Navbar from '../../components/navbar/Navbar'
 import Footer from '../../components/footer/Footer'
+import { useNavigate } from 'react-router-dom';
 
 const Product = () => {
     const { id } = useParams();
+    const navigate = useNavigate();
 
     window.scrollTo(0, 0);
 
@@ -36,8 +38,6 @@ const Product = () => {
     for(let i = 1; i <= 20; i++) {
         quantityOptions.push(i)
     }
-
-    console.log(selectedQuantity)
 
     const dispatch = useDispatch();
 
@@ -126,8 +126,11 @@ const Product = () => {
             }));
           }
         }
-      };
-      
+      }
+
+    const handleBuyNow = () => {
+        navigate('/checkout', { state: { fromBuyNow: true, productId: product.id, quantity: selectedQuantity, size: selectedSize, color: selectedColor }})
+    }
 
     return (
         <>
@@ -240,7 +243,7 @@ const Product = () => {
 
                     <div className="buttons d-flex flex-column gap-2">
                         <button onClick={handleAddToCart} className="btn btn-dark fs-5">Add to Cart</button>
-                        <button className="btn btn-outline-dark fs-5">Buy Now</button>
+                        <button onClick={handleBuyNow} className="btn btn-outline-dark fs-5">Buy Now</button>
                     </div>
                 </div>
             </div>

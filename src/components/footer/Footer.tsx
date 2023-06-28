@@ -15,7 +15,7 @@ const Footer = () => {
                         <span className='fs-5'>Follow us on social networks:</span>
                     </div>
                     <div className="icons d-flex gap-4">
-                    <a href="" className="link-secondary">
+                        <a href="" className="link-secondary">
                             <i className="bi bi-instagram text-white"></i>
                         </a>
                         <a href="" className="link-secondary">
@@ -112,9 +112,7 @@ const Footer = () => {
             </div>
             <div className="text-center p-3 copyright">
                 <span>{`© 2023-${currentYear} `}</span>
-                <a className="text-white" href="https://e-commerce-kaykyls.vercel.app/">
-                e-commerce-kaykyls.vercel.app
-                </a>
+                <Link to={"https://e-commerce-kaykyls.vercel.app/"} className="text-white">e-commerce-kaykyls.vercel.app</Link>
             </div>
         </footer>
     )
