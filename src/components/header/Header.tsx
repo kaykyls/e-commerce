@@ -52,7 +52,7 @@ const Header = () => {
                 <div className="search">
                     <form className="d-flex" role="search">
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                        <button className="btn btn-secondary" type="submit"><i className="bi bi-search"></i></button>
+                        <button className="btn btn-dark" type="submit"><i className="bi bi-search"></i></button>
                     </form>
                 </div>
                 <div className="buttons">

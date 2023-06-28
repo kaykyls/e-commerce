@@ -15,7 +15,7 @@ const Login = () => {
                 </div>
                 <div className="password-wrapper">
                     <label htmlFor="email">Password</label>
-                    <input type="text" id='email' className="form-control" placeholder='Password'/>
+                    <input type="password" id='email' className="form-control" placeholder='Password'/>
                 </div>
                 <div className="d-flex justify-content-between gap-3">
                     <div>
@@ -27,10 +27,9 @@ const Login = () => {
                     </div>
                 </div>
                 
-                <button className="btn btn-primary">Login</button>
+                <button className="btn btn-dark">Login</button>
                 <div className="d-flex gap-3">
                     <span>Don't have an account? <Link className='text-decoration-underline' to={"/register"}>Register</Link></span>
-                    
                 </div>
             </form>
         </div>

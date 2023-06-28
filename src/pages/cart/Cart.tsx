@@ -63,7 +63,7 @@ const Cart = () => {
         <Header/>
         <Navbar/>
         <div className='container cart mt-5 mb-5'>
-            <div className="row row-md-2">
+            <div className="row">
                 <div className="col-md-8">
                     {(cart.cartItems.length === 0 && user.cartItems.length === 0) &&
                         <div className='mb-5 mb-md-0 d-flex justify-content-center'>
@@ -72,7 +72,7 @@ const Cart = () => {
                             </span>
                         </div>
                     }
-                    {(cart.cartItems.length > 0 || user.cartItems.length > 0) && <div className="cart-products mb-4 border rounded border-2">
+                    {(cart.cartItems.length > 0 || user.cartItems.length > 0) && <div className="cart-products mb-4 border rounded">
                         {cart.cartItems.map((item: any, index: number) => {
                             const product = products.find((product) => product.id === item.id)
                             return (
@@ -127,7 +127,7 @@ const Cart = () => {
                     </div> }
                 </div> 
                 <div className="col-md-4">
-                    <div className="summary border p-4 border-2 rounded d-flex flex-column gap-3">
+                    <div className="summary border p-4 rounded d-flex flex-column gap-3">
                         <div className="summary-title">
                             <h3>Summary</h3>
                         </div>
@@ -146,7 +146,7 @@ const Cart = () => {
                             <h5>${calculateTotalPrice() + shippingPrice}</h5>
                          </div>
                         <div className="summary-checkout">
-                            <button className="btn btn-dark">Checkout</button>
+                            <Link to={"/checkout"}><button className="btn btn-dark">Checkout</button></Link>
                          </div>
                     </div>
                 </div>

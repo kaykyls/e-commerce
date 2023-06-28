@@ -11,10 +11,7 @@ const Register = (props: RegisterProps) => {
   return (
     <div className="register d-flex align-items-center justify-content-center">
       <form action="" className="register-form-wrapper border p-4 p-md-5 gap-3 d-flex flex-column justify-content-center">
-        {props.fromLogin && <Link to={"/"} className="back-btn fs-6 text-decoration-underline">
-          <TbArrowNarrowLeft />
-          Return
-        </Link>}
+        <Link to={"/"} className="back-btn fs-6 text-decoration-underline"><TbArrowNarrowLeft/>Return</Link>
         <h1 className="fs-2 fw-bold">Register</h1>
         <div className="name-wrapper">
           <label htmlFor="name">Name</label>
@@ -37,7 +34,7 @@ const Register = (props: RegisterProps) => {
             placeholder="Confirm Password"
           />
         </div>
-        <button className="btn btn-primary">Register</button>
+        <button className="btn btn-dark">Register</button>
         <div className="d-flex gap-3">
           <span>
             Already have an account? <Link className="text-decoration-underline" to={"/login"}>Login</Link>
