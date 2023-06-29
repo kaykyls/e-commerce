@@ -20,8 +20,6 @@ const Product = () => {
     const { id } = useParams();
     const navigate = useNavigate();
 
-    window.scrollTo(0, 0);
-
     // const [productId, setProductId] = useState<number>(0);
     const [product, setProduct] = useState<any>(null);
     const primarySliderRef = useRef<Splide | null>(null);
@@ -49,9 +47,6 @@ const Product = () => {
     }
 
     useEffect(() => {
-        // const parsedId = parseInt(id || '', 10);
-        // setProductId(parsedId);
-
         const filteredProduct = getProduct(String(id));
         setProduct(filteredProduct);
     }, [id]);
@@ -134,121 +129,121 @@ const Product = () => {
 
     return (
         <>
-        <Header/>
-        <Navbar/>
-        <div className='product-container container mt-3 mt-md-5 mb-5'>
-            <div className="row gx-0 gx-md-4 gx-lg-5">
-                <div className="col-md-6 mb-md-0">
-                    <div className="product-images">
-                    <Splide
-                        ref={primarySliderRef}
-                        options={{
-                            perPage: 1,
-                            perMove: 1,
-                            arrows: false,
-                            autoplay: false,
-                            pagination: true,
-                            drag: false,
-                            breakpoints: {
-                                768: {
-                                    arrows: true,
-                                    pagination: true,
-                                },
-                            },
-                        }}
-                        onMoved={handleSlideChange}    
-                    >
-                        {images.map((image, index) => (
-                            <SplideSlide key={index}>
-                                <img className="product-image img-fluid rounded mb-5 mb-md-3" src={product?.image} alt="product" />
-                            </SplideSlide>
-                        ))}
-                        </Splide>
-                    </div>
-
-                    <div className="images d-none d-md-block">
+            <Header/>
+            <Navbar/>
+            <div className='product-container container mt-3 mt-md-5 mb-5'>
+                <div className="row gx-0 gx-md-4 gx-lg-5">
+                    <div className="col-md-6 mb-md-0">
+                        <div className="product-images">
                         <Splide
-                        options={{
-                            perPage: 5,
-                            perMove: 1,
-                            arrows: true,
-                            gap: ".5rem",
-                            autoplay: false,
-                            pagination: false,
-                            breakpoints: {
-                                1200: {
-                                    perPage: 4,
+                            ref={primarySliderRef}
+                            options={{
+                                perPage: 1,
+                                perMove: 1,
+                                arrows: false,
+                                autoplay: false,
+                                pagination: true,
+                                drag: false,
+                                breakpoints: {
+                                    768: {
+                                        arrows: true,
+                                        pagination: true,
+                                    },
                                 },
-                                992: {
-                                    perPage: 3,
-                                },
-                                768: {
-                                    perPage: 0,
-                                },
-                            },
-                        }}
+                            }}
+                            onMoved={handleSlideChange}    
                         >
-                        {images.map((image, index) => (
-                            <SplideSlide key={index}>
-                                <div className={`card${index === selectedSlideIndex ? " image-is-selected" : ""}`} onClick={() => handleSecondarySliderClick(index)}>
-                                    <img className="img border rounded" src={product?.image} alt="product" />
-                                </div>
-                            </SplideSlide>
-                        ))}
-                        </Splide>
-                    </div>
-                </div>
-                <div className="col-md-6">
-                    <h1 className="product-title fs-3 mb-2">{product?.title}</h1>
-                            
-                    <div className="product-price mb-2">
-                        <span className='fs-2 fw-bold me-1 product-current-price'>${product?.currentPrice}</span>
-                        {product?.isOnSale && <span className='fs-6 product-previous-price'>${product?.previousPrice}</span>}
-                    </div>
-
-                    <div className="product-rating mb-3">
-                        {renderStars()}
-                        <span className='ms-2 total-ratings'>1739 Reviews</span>
-                    </div>
-
-                    <div className="product-color mb-3">
-                        <label className='fs-5' htmlFor="color">Color</label>
-                        <div className="colors d-flex gap-2">
-                            <div onClick={() => setSelectedColor("black")} className={selectedColor === "black" ? "selected-color color-option border border-3 rounded-circle" : "color-option border border-3 rounded-circle"} style={{backgroundColor: "#000"}}></div>
-                            <div onClick={() => setSelectedColor("blue")} className={selectedColor === "blue" ? "selected-color color-option border border-3 rounded-circle" : "color-option border border-3 rounded-circle"} style={{backgroundColor: "#00f"}}></div>
-                            <div onClick={() => setSelectedColor("white")} className={selectedColor === "white" ? "selected-color color-option border border-3 rounded-circle" : "color-option border border-3 rounded-circle"} style={{backgroundColor: "#fff"}}></div>
-                            <div onClick={() => setSelectedColor("gray")} className={selectedColor === "gray" ? "selected-color color-option border border-3 rounded-circle" : "color-option border border-3 rounded-circle"} style={{backgroundColor: "#eee"}}></div>
-                        </div>
-                    </div>
-
-                    <div className="options form p-0 mb-3 row row-cols-2 gx-2">
-                        <div className="size">
-                            <label className='fs-5' htmlFor="size">Size</label>
-                            <select value={selectedSize} onChange={(e) => setSelectedSize(e.target.value)} id="size" className="form-select">
-                                <option value="38">38</option>
-                                <option value="39">39</option>
-                                <option value="40">40</option>
-                            </select>
+                            {images.map((image, index) => (
+                                <SplideSlide key={index}>
+                                    <img className="product-image img-fluid rounded mb-5 mb-md-3" src={product?.image} alt="product" />
+                                </SplideSlide>
+                            ))}
+                            </Splide>
                         </div>
 
-                        <div className="quantity">
-                            <label className='fs-5' htmlFor="quantity">Quantity</label>
-                            <select value={selectedQuantity} onChange={(e) => setSelectedQuantity(Number(e.target.value))} id="quantity" className="form-select">
-                                {quantityOptions.map((option, index) => (
-                                    <option key={index} value={option}>{option}</option>
-                                ))}
-                            </select>
+                        <div className="images d-none d-md-block">
+                            <Splide
+                            options={{
+                                perPage: 5,
+                                perMove: 1,
+                                arrows: true,
+                                gap: ".5rem",
+                                autoplay: false,
+                                pagination: false,
+                                breakpoints: {
+                                    1200: {
+                                        perPage: 4,
+                                    },
+                                    992: {
+                                        perPage: 3,
+                                    },
+                                    768: {
+                                        perPage: 0,
+                                    },
+                                },
+                            }}
+                            >
+                            {images.map((image, index) => (
+                                <SplideSlide key={index}>
+                                    <div className={`card${index === selectedSlideIndex ? " image-is-selected" : ""}`} onClick={() => handleSecondarySliderClick(index)}>
+                                        <img className="img border rounded" src={product?.image} alt="product" />
+                                    </div>
+                                </SplideSlide>
+                            ))}
+                            </Splide>
                         </div>
                     </div>
+                    <div className="col-md-6">
+                        <h1 className="product-title fs-3 mb-2">{product?.title}</h1>
+                                
+                        <div className="product-price mb-2">
+                            <span className='fs-2 fw-bold me-1 product-current-price'>${product?.currentPrice}</span>
+                            {product?.isOnSale && <span className='fs-6 product-previous-price'>${product?.previousPrice}</span>}
+                        </div>
 
-                    <div className="buttons d-flex flex-column gap-2">
-                        <button onClick={handleAddToCart} className="btn btn-dark fs-5">Add to Cart</button>
-                        <button onClick={handleBuyNow} className="btn btn-outline-dark fs-5">Buy Now</button>
+                        <div className="product-rating mb-3">
+                            {renderStars()}
+                            <span className='ms-2 total-ratings'>1739 Reviews</span>
+                        </div>
+
+                        <div className="product-color mb-3">
+                            <label className='fs-5' htmlFor="color">Color</label>
+                            <div className="colors d-flex gap-2">
+                                <div onClick={() => setSelectedColor("black")} className={selectedColor === "black" ? "selected-color color-option border border-3 rounded-circle" : "color-option border border-3 rounded-circle"} style={{backgroundColor: "#000"}}></div>
+                                <div onClick={() => setSelectedColor("blue")} className={selectedColor === "blue" ? "selected-color color-option border border-3 rounded-circle" : "color-option border border-3 rounded-circle"} style={{backgroundColor: "#00f"}}></div>
+                                <div onClick={() => setSelectedColor("white")} className={selectedColor === "white" ? "selected-color color-option border border-3 rounded-circle" : "color-option border border-3 rounded-circle"} style={{backgroundColor: "#fff"}}></div>
+                                <div onClick={() => setSelectedColor("gray")} className={selectedColor === "gray" ? "selected-color color-option border border-3 rounded-circle" : "color-option border border-3 rounded-circle"} style={{backgroundColor: "#eee"}}></div>
+                            </div>
+                        </div>
+
+                        <div className="options form p-0 mb-3 row row-cols-2 gx-2">
+                            <div className="size">
+                                <label className='fs-5' htmlFor="size">Size</label>
+                                <select value={selectedSize} onChange={(e) => setSelectedSize(e.target.value)} id="size" className="form-select">
+                                    <option value="38">38</option>
+                                    <option value="39">39</option>
+                                    <option value="40">40</option>
+                                </select>
+                            </div>
+
+                            <div className="quantity">
+                                <label className='fs-5' htmlFor="quantity">Quantity</label>
+                                <select value={selectedQuantity} onChange={(e) => setSelectedQuantity(Number(e.target.value))} id="quantity" className="form-select">
+                                    {quantityOptions.map((option, index) => (
+                                        <option key={index} value={option}>{option}</option>
+                                    ))}
+                                </select>
+                            </div>
+                        </div>
+
+                        <div className="buttons d-flex flex-column gap-2">
+                            <button onClick={handleAddToCart} className="btn btn-dark fs-5">Add to Cart</button>
+                            <button onClick={handleBuyNow} className="btn btn-outline-dark fs-5">Buy Now</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <Footer/>
+            <Footer/>
         </>
     )
 }

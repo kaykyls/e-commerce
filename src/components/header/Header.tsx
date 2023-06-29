@@ -63,7 +63,7 @@ const Header = () => {
                         <ul className="dropdown-menu">
                             <li><Link to={"/login"} className="dropdown-item"><FiLogIn/> Login</Link></li>
                             <li><hr className="dropdown-divider"/></li>
-                            <li><a className="dropdown-item" href="#">Your Profile</a></li>
+                            <li><Link to={"/account"} className="dropdown-item">Your Account</Link></li>
                             <li><a className="dropdown-item" href="#">Orders</a></li>
                             <li><a className="dropdown-item" href="#">Wishlist</a></li>
                             {/* <li><hr className="dropdown-divider"/></li>

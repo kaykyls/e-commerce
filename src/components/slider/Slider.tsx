@@ -1,7 +1,17 @@
 import React from 'react'
 import './slider.scss'
+import { useState, useEffect } from 'react'
+import { featuredProducts, products } from '../../api'
+import { Link } from 'react-router-dom'
 
 const Slider = () => {
+    const [featured, setFeatured] = useState<any[]>([])
+
+    useEffect(() => {
+        const featuredProducts = products.filter(product => product.isFeatured)
+        setFeatured(featuredProducts) 
+    }, [])
+
     return (
         <div className="slider-container mb-5">
             <div id='recommended-carousel' className="carousel slide carousel-dark" data-bs-ride="carousel">
@@ -12,13 +22,19 @@ const Slider = () => {
                 </div>
                 <div className="carousel-inner">
                     <div className="carousel-item active" data-bs-interval="5000">
-                        <img src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" className="d-block w-100" alt="..."/>
+                        <Link to={`/product/${featuredProducts[0].id}`}>
+                            <img className='featured-image' src={featuredProducts[0].image} alt="..."/>
+                        </Link>
                     </div>
                     <div className="carousel-item" data-bs-interval="5000">
-                        <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1025&q=80" className="d-block w-100" alt="..."/>
+                        <Link to={`/product/${featuredProducts[1].id}`}>
+                            <img className='featured-image' src={featuredProducts[1].image} alt="..."/>
+                        </Link>
                     </div>
                     <div className="carousel-item" data-bs-interval="5000">
-                        <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" className="d-block w-100" alt="..."/>
+                        <Link to={`/product/${featuredProducts[2].id}`}>
+                            <img className='featured-image' src={featuredProducts[2].image} alt="..."/>
+                        </Link>
                     </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#recommended-carousel" data-bs-slide="prev">
