@@ -1,12 +1,7 @@
 .price {
     display: flex;
     flex-direction: column;
-    // gap: .5rem;
 
-    // p {
-    //     margin-bottom: 0;
-    // }
-  
     .previous-price {
       text-decoration: line-through;
       color: #939393;
@@ -15,4 +10,54 @@
     .current-price {
       font-weight: bold;
     }
+}
+
+.card-container {
+  position: relative;
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: .1s;
+  z-index: 999;
+
+  &:hover {
+    transition: .1s;
+    transform: scale(1.2);
+  }
+}
+
+.card {
+  .card-image {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      transition: .3s;
+    }
+
+    &:hover {
+      img {
+        transition: .3s;
+        transform: scale(1.1);
+      }
+    }
+
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   background: linear-gradient(#00000012, #00000020);
+    //   transition: .1s;
+    // }
+  }
 }

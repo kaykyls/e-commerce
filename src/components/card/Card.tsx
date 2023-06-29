@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import './card.scss'
+import {AiOutlineHeart, AiFillHeart} from 'react-icons/ai'
+import { useState } from 'react';
 
 interface CardProps {
     id: string,
@@ -12,6 +14,8 @@ interface CardProps {
 }
 
 const Card = ({ id, title, rating, previousPrice, currentPrice, image }: CardProps) => {
+    const [isFavorite, setIsFavorite] = useState(false);
+
     const renderStars = () => {
         const stars = [];
         const filledStars = Math.floor(rating);
@@ -37,24 +41,36 @@ const Card = ({ id, title, rating, previousPrice, currentPrice, image }: CardPro
         }
 
         return stars;
-    };    
+    };
+
+    const handleAddToFavorites = () => {
+        setIsFavorite(!isFavorite);
+    }
 
     return (
-        <Link to={`/product/${id}`} className="col">
-            <div className="card">
-                <img src={image} className="card-img-top" alt="..."/>
-                <div className="card-body">
-                    <h5 className="card-title">{title}</h5>
-                    <div className="rating mb-2">
-                        {renderStars()}
+        <div className='card-container'>
+            <div onClick={handleAddToFavorites} className="favorite-btn fs-4">
+                {isFavorite ? <AiFillHeart/> : <AiOutlineHeart/>}
+                <span></span>
+            </div>
+            <Link to={`/product/${id}`} className="col">
+                <div className="card">
+                    <div className="card-image">
+                        <img src={image} className="card-img-top" alt="..."/>
                     </div>
-                    <div className='price'>
-                        <p className='previous-price mb-0'>${previousPrice}</p>
-                        <p className='current-price mb-0 fs-5'>${currentPrice}</p>
+                    <div className="card-body">
+                        <h5 className="card-title">{title}</h5>
+                        <div className="rating mb-2">
+                            {renderStars()}
+                        </div>
+                        <div className='price'>
+                            <p className='previous-price mb-0'>${previousPrice}</p>
+                            <p className='current-price mb-0 fs-5'>${currentPrice}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </Link>
+            </Link>
+        </div>
     )
 }
 
