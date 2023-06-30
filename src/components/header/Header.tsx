@@ -46,7 +46,7 @@ const Header = () => {
                 </nav>
                 <div className="logo">
                     <Link to={"/"}>
-                        <h1 className="fs-1 fw-bold">Shoes</h1>
+                        <h1 className="fs-1">Shoes</h1>
                     </Link>
                 </div>
                 <div className="search">

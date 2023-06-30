@@ -17,15 +17,16 @@
 }
 
 .favorite-btn {
+  display: flex;
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background-color: transparent;
-  border: none;
-  outline: none;
+  background: #ffffff94;
   cursor: pointer;
   transition: .1s;
   z-index: 999;
+  border-radius: 999px;
+  padding: .3rem;
 
   &:hover {
     transition: .1s;
