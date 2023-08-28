@@ -1,4 +1,11 @@
-# PROJETO NO COMEÇO DO DESENVOLVIMENTO
+# EARLY DEVELOPMENT
+
+## THIS IS 1 OF 3 REPOSITORIES
+### Backend
+## https://github.com/kaykyls/e-commerce-back-end
+### Admin
+## https://github.com/kaykyls/e-commerce-admin
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
